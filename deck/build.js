@@ -170,14 +170,14 @@ function lbl(slide, x, y, s, color = GRAY) {
   ], { fontSize: 14, paraSpaceAfter: 4 }), { x: 0.3, y: 5.5, w: 9.4, h: 1.25, valign: "top", margin: 0,
     isTextBox: true, objectName: "Key changes" });
 
-  cite(s, "Adapted from Brat DJ et al. cIMPACT-NOW update 12. Neuro-Oncol 2026;28(9):2069-2089. doi:10.1093/neuonc/noag108");
+  cite(s, "Figure: Park YW et al. Korean J Radiol 2026 (in press), Fig. 2 · Original criteria: Brat DJ et al. Neuro-Oncol 2026;28(9):2069-2089");
   s.addNotes(
 `Update 12 grading algorithm (Brat et al. 2026).
 1) MVP, necrosis, CDKN2A/B HD, 그리고 새로 PDGFRA amplification 중 하나라도 있으면 grade 4.
 2) 없으면 mitotic count ≥3/2.4 mm²이면 grade 3, 아니면 grade 2.
 3) 주황 박스: grade 3를 시사하는 분자 변화 (CDK4/6, CCND2 amp, RB1, PIK3CA/PIK3R1, EGFR, MYCN, methylation A_IDH_HG/G-CIMP-low).
 4) Oligodendroglioma는 grading을 바꿀 근거가 없었다고 결론.
-※ 그림은 논문 Fig.를 기반으로 다시 그림.`);
+※ 그림 출처: Park YW, ..., Park JE. Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know. Korean J Radiol 2026 (in press) Fig. 2를 다시 그림. 기준 원문은 Brat 2026.`);
 }
 
 // ---------------- Slide 3: PDGFRA amplification ----------------
@@ -296,7 +296,7 @@ function lbl(slide, x, y, s, color = GRAY) {
   const C = (t, hi, ctr) => ({ text: t, options: { color: hi ? GOLD : WHITE, bold: !!hi, align: ctr ? "center" : "left", fill: { color: hi ? "332600" : DARK } } });
   s.addTable([
     [H("Grade"), H("주요 치료 근거")],
-    [C("2", false, true), C("관찰 (GTR) / 잔존 non-enhancing → vorasidenib (INDIGO)")],
+    [C("2", false, true), C("관찰 (GTR) / 잔존 non-enhancing → vorasidenib (INDIGO; 식약처 2026.1 허가)")],
     [C("3", false, true), C("RT → adjuvant TMZ 12 cycles (CATNON: concurrent TMZ 이득 없음)")],
     [C("4", true, true), C("RT + TMZ, 고등급 치료 (EANO) — vorasidenib 대상 아님", true)],
   ], { x: 4.2, y: 1.05, w: 5.5, colW: [0.8, 4.7], fontSize: 12, fontFace: "Calibri",
@@ -311,11 +311,11 @@ function lbl(slide, x, y, s, color = GRAY) {
   ], { fontSize: 13.5, paraSpaceAfter: 4 }), { x: 4.2, y: 3.65, w: 5.5, h: 2.9, valign: "top", margin: 0,
     isTextBox: true, objectName: "Take-home" });
 
-  cite(s, "van den Bent MJ, Lancet Oncol 2021;22:813 & 2026;27:45 · Mellinghoff IK, NEJM 2023;389:589 · Weller M, Nat Rev Clin Oncol 2021;18:170 · Brat DJ, Neuro-Oncol 2026");
+  cite(s, "van den Bent MJ, Lancet Oncol 2021;22:813 & 2026;27:45 · Mellinghoff IK, NEJM 2023;389:589 · Weller M, Nat Rev Clin Oncol 2021;18:170 · Park YW, Korean J Radiol 2026 (in press)");
   s.addNotes(
 `이 증례: 처음에는 조직학적으로 grade 3. 영상에서 ADC/CBV상 aggressive해 병리에 feedback → PDGFRA amplification 확인 → cIMPACT-NOW 12에 따라 grade 4로 재판독 → CCRT 시행.
 - Grade 3 IDH-mut astrocytoma: CATNON에서 adjuvant TMZ는 생존 이득 (IDH-mut에서 median OS 12.5 vs 6.0년, HR 0.54), concurrent TMZ는 유의한 이득 없음 (HR 0.81, NS).
-- Grade 2: INDIGO에서 vorasidenib이 PFS 27.7 vs 11.1개월로 개선 (잔존 non-enhancing grade 2 대상). Grade 4로 바뀌면 대상이 아님.
+- Grade 2: INDIGO에서 vorasidenib이 PFS 27.7 vs 11.1개월로 개선 (잔존 non-enhancing grade 2 대상). FDA 2024년 8월, 국내 식약처 2026년 1월 허가 (Park YW, KJR 2026). Grade 4로 바뀌면 대상이 아님.
 - Grade 4: 고등급 치료 (RT + TMZ).
 - 메시지: 영상의학과의 feedback이 molecular upgrade와 치료 변경으로 이어진 증례.`);
 }

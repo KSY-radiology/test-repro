@@ -98,7 +98,7 @@ C.push(P("Neuro-Oncology 2026;28(9):2069–2089 · doi:10.1093/neuonc/noag108 ·
 
 C.push(...BOX("이 노트의 출처와 한계", [
   "주 출처: Update 12의 **PubMed 초록**. PMC 전문은 이 작업 환경에서 본문이 열람되지 않아 **원문 Table·Figure의 세부 문구(각주, 정의, 인용 연구별 수치)는 확인하지 못함** → 해당 부분은 **[원문 확인 권장]** 으로 표시.",
-  "Grading 알고리즘 그림은 발표 슬라이드에 사용한 Fig. 2(cIMPACT-NOW update 12 schematic)를 기준으로 정리. 그 Figure가 실린 2차 리뷰 논문 자체는 검색으로 특정하지 못함.",
+  "Grading 알고리즘 그림 출처: **Park YW, Wagner A, Karschnia P, Vollmuth P, Sahm F, Ahn SS, Kim HS, Park JE. Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know. Korean J Radiol 2026 (in press; accepted 2026-08-06)** Fig. 2. 아직 PubMed 미등재 → 권·호·쪽·DOI는 출판 후 확인 필요. 이 노트에는 사용자가 제공한 첫 두 쪽과 Fig. 2만 반영.",
   "PDGFRA amplification의 근거는 **전문을 직접 읽은 원저**(Update 5 전문, Virata 2026 전문, Richardson 2026 전문, CATNON methylation 2021 전문, PDGFRA IHC 2026 전문)와 초록(Yang 2019, CATNON final 2026, Tauziède-Espariat 2026)으로 구성.",
   "다른 문헌·일반 지식에서 온 내용은 **[보충]**, 필자의 실무 제안은 **[제안]** 으로 구분.",
   "PMC 텍스트 추출 과정에서 이탤릭 유전자명이 빠지는 문제가 있어, Virata 2026의 유전자별 수치는 **본문에 나열된 유전자 순서로 대응**시킴 → **[원문 확인 권장]**.",
@@ -234,7 +234,7 @@ C.push(...B([
 ]));
 C.push(SRC("Brat 2026 (PubMed abstract)"));
 
-C.push(H2("4-2. Grading 알고리즘 (Fig. 2 기준)"));
+C.push(H2("4-2. Grading 알고리즘 (Park YW, KJR 2026, Fig. 2)"));
 C.push(...T(["Tumor", "Grade", "기준"], [
   ["Astrocytoma, IDH-mut", "**4**", "MVP, necrosis, **CDKN2A/B HD** 그리고/또는 **PDGFRA amp** (하나라도 있으면)"],
   ["Astrocytoma, IDH-mut", "**3**", "Grade 4 기준 없음 + **mitotic activity ≥3 / 2.4 mm²**"],
@@ -248,7 +248,7 @@ C.push(...B([
   "Methylation(G-CIMP-low, A_IDH_HG): \"다른 grading 기준에 따라 **grade 3 또는 4**와 부합\" (초록)",
   "Mitosis 기준은 \"**could be considered**\" — 제안 수준의 표현",
 ]));
-C.push(SRC("Brat 2026 (PubMed abstract); Fig. 2 schematic(발표용 그림); Richardson 2026 (PMC13391642) Supplemental Table 기술"));
+C.push(SRC("Brat 2026 (PubMed abstract); Park YW, Korean J Radiol 2026 (in press) Fig. 2; Richardson 2026 (PMC13391642) Supplemental Table 기술"));
 
 C.push(H2("4-3. Grade 4: PDGFRA amplification"));
 C.push(...B([
@@ -443,10 +443,12 @@ C.push(...B([
   "대상: 수술 외 치료를 받지 않은 **잔존/재발 grade 2 IDH-mutant glioma**, 331명",
   "PFS **27.7 vs 11.1개월** (HR 0.39), 다음 치료까지 기간 HR 0.26",
   "Grade 3 이상 ALT 상승 9.6%",
+  "허가: **미국 FDA 2024년 8월**, **국내 식약처(MFDS) 2026년 1월** → grade 2 IDH-mutant glioma의 치료가 수술 후 'watch-and-wait'에서 IDH inhibitor로 이동",
+  "IDH-mutant glioma 치료에서 약 20년 만의 첫 주요 치료적 진전으로 평가 → 초기 진단·추적 영상 해석의 중요성 증가",
   "→ **Grade 2에 한정된 근거**. Grade 3/4로 upgrade되면 이 전략의 대상에서 벗어남",
   "Vorasidenib은 non-enhancing, 임상적으로 안정된 잔존 grade 2 종양에서 RT·항암을 미루는 \"active delay\" 전략으로 자리매김 [보충]",
 ]));
-C.push(SRC("Mellinghoff, NEJM 2023;389:589 (10.1056/NEJMoa2304194); Wu, Curr Treat Options Oncol 2026 (abstract)"));
+C.push(SRC("Mellinghoff, NEJM 2023;389:589 (10.1056/NEJMoa2304194); Park YW, Korean J Radiol 2026 (in press) Introduction; Wu, Curr Treat Options Oncol 2026 (abstract)"));
 
 C.push(H2("7-3. Grade별 치료 개요"));
 C.push(...T(["Grade", "치료 개요", "근거"], [
@@ -500,7 +502,7 @@ C.push(...T(["항목", "핵심", "출처"], [
   ["Update 9", "Methylation classifier는 통합 진단의 한 도구", "Aldape 2025"],
   ["Update 10", "새 tumor type 정의(영상 포함 clinical phenotype 필수)", "Hawkins 2025"],
   ["Update 11", "<40세 EGFR amp·+7/−10 단독 GBM 금지, PDGFRA는 <25세 pedHGG marker", "Wesseling 2025"],
-  ["**Update 12**", "**PDGFRA amp → grade 4**, mitosis ≥3/2.4 mm² → grade 3, grade 3 분자 marker", "Brat 2026"],
+  ["**Update 12**", "**PDGFRA amp → grade 4**, mitosis ≥3/2.4 mm² → grade 3, grade 3 분자 marker", "Brat 2026; 그림 Park YW, KJR 2026"],
   ["Validation", "PDGFRA amp 재분류 grade 4 OS 51.4 vs grade 3 126.2개월 (HR 1.9)", "Richardson 2026"],
   ["실제 진료", "24% grade 변경, CNV(methylation) 기여 최대", "Tauziède-Espariat 2026"],
   ["검출", "FISH, NGS, methylation CNV, SNP/CGH, IHC screening(≥10% 강양성: 민감도 100%)", "Tauziède-Espariat 2026"],
@@ -534,6 +536,7 @@ const refs = [
   "van den Bent MJ, et al. CATNON final and exploratory analyses. Lancet Oncol 2026;27:45–56. doi:10.1016/S1470-2045(25)00614-X",
   "Mellinghoff IK, et al. Vorasidenib in IDH1- or IDH2-mutant low-grade glioma (INDIGO). N Engl J Med 2023;389:589–601. doi:10.1056/NEJMoa2304194",
   "Weller M, et al. EANO guidelines on the diagnosis and treatment of diffuse gliomas of adulthood. Nat Rev Clin Oncol 2021;18:170–186. doi:10.1038/s41571-020-00447-z",
+  "Park YW, Wagner A, Karschnia P, Vollmuth P, Sahm F, Ahn SS, Kim HS, Park JE. Imaging of isocitrate dehydrogenase-mutant gliomas in the era of isocitrate dehydrogenase inhibitors: what radiologists need to know. Korean J Radiol 2026 (in press; accepted Aug 6, 2026). [Fig. 2 = Update 12 grading schematic]",
   "Kurokawa R, et al. Imaging diagnosis of adult-type diffuse gliomas in the era of WHO CNS5 and cIMPACT-NOW updates 8–11. Jpn J Radiol 2026;44:1534–1542. doi:10.1007/s11604-026-02013-6",
   "Ozono K, et al. T2-FLAIR mismatch sign in nonenhancing astrocytoma, IDH-mutant. J Neurooncol 2026. doi:10.1007/s11060-026-05519-1",
   "Alfattal R, et al. IDH-mutant astrocytomas in patients older than 55 years. Int J Surg Pathol 2026. doi:10.1177/10668969261489616",
