@@ -79,8 +79,8 @@ function lbl(slide, x, y, s, color = GRAY) {
   s.addText("cIMPACT-NOW after WHO CNS5 (2021)", { placeholder: "title" });
 
   s.addText([
-    T("WHO CNS5 기준점  ", { bold: true, color: GOLD }),
-    T("Astrocytoma, IDH-mutant = 하나의 type, CNS WHO grade 2–4 / CDKN2A/B homozygous deletion → 조직 소견과 무관하게 grade 4", { color: WHITE }),
+    T("WHO CNS5 baseline  ", { bold: true, color: GOLD }),
+    T("Astrocytoma, IDH-mutant = single tumor type, CNS WHO grade 2–4 / CDKN2A/B homozygous deletion → grade 4 regardless of histology", { color: WHITE }),
   ], { x: 0.4, y: 1.0, w: 9.2, h: 0.62, fontSize: 13, fill: { color: DARK2 }, margin: 8, valign: "middle",
     isTextBox: true, objectName: "CNS5 baseline" });
 
@@ -89,12 +89,12 @@ function lbl(slide, x, y, s, color = GRAY) {
     color: hi ? GOLD : WHITE, bold: hi && i === 0, fill: { color: hi ? "332600" : (i === 0 ? DARK : "000000") },
     align: i === 0 ? "center" : "left" } }));
   const rows = [
-    [H("Update"), H("발표"), H("대상"), H("핵심 내용")],
-    R(["8", "Neuro-Oncol 2025", "Meningioma grading", "Grade 1 형태라도 1p deletion + 22q del and/or NF2 → grade 2 제안, brain invasion 판정 표준화"]),
-    R(["9", "Neuro-Oncol Adv 2025", "DNA methylation profiling", "Classifier는 integrated diagnosis의 한 도구 (단독 진단 X), layered report 작성 예시"]),
-    R(["10", "Brain Pathol 2025", "New tumor type 정의", "Clinical phenotype + methylation cluster + driver + histology, ≥2 독립 보고 → 미충족 시 NEC"]),
-    R(["11", "Brain Pathol 2025", "IDH/H3-wt HGG, PF EPN", "<40세: EGFR amp·+7/−10 단독으로 GBM 진단 금지, TERTp 단독 저등급 → grade 4 신중"]),
-    R(["12", "Neuro-Oncol 2026", "IDH-mutant glioma grading", "PDGFRA amp → grade 4, mitosis ≥3/2.4 mm² → grade 3, grade 3 분자 marker 제시"], true),
+    [H("Update"), H("Journal"), H("Topic"), H("Key recommendation")],
+    R(["8", "Neuro-Oncol 2025", "Meningioma grading", "Grade 1 histology + 1p deletion with 22q del and/or NF2 variant → grade 2; standardized brain invasion"]),
+    R(["9", "Neuro-Oncol Adv 2025", "DNA methylation profiling", "Classifier = one tool within integrated diagnosis (not stand-alone); layered report examples"]),
+    R(["10", "Brain Pathol 2025", "Defining new tumor types", "Clinical phenotype + methylation cluster + driver + histology, ≥2 independent reports; otherwise NEC"]),
+    R(["11", "Brain Pathol 2025", "IDH/H3-wt HGG, PF EPN", "Age <40: EGFR amp or +7/−10 alone insufficient for GBM; caution with TERTp-only low-grade tumors"]),
+    R(["12", "Neuro-Oncol 2026", "IDH-mutant glioma grading", "PDGFRA amp → grade 4; mitoses ≥3/2.4 mm² → grade 3; molecular markers of grade 3"], true),
   ];
   s.addTable(rows, { x: 0.4, y: 1.82, w: 9.2, colW: [0.8, 1.55, 1.95, 4.9], fontSize: 11.5, fontFace: "Calibri",
     border: { type: "solid", pt: 0.75, color: "404040" }, valign: "middle", rowH: [0.34, 0.68, 0.68, 0.68, 0.68, 0.68],
@@ -102,17 +102,17 @@ function lbl(slide, x, y, s, color = GRAY) {
 
   s.addText([
     T("Update 1–7 (2018–2020)", { bold: true, color: GOLD }),
-    T("은 WHO CNS5에 이미 반영됨 (예: update 3 molecular GBM, update 5 CDKN2A/B HD grading)", { color: WHITE }),
+    T(" were incorporated into WHO CNS5 (e.g., update 3: molecular GBM; update 5: CDKN2A/B HD grading)", { color: WHITE }),
   ], { x: 0.4, y: 5.85, w: 9.2, h: 0.4, fontSize: 12, margin: 0, isTextBox: true, objectName: "Prior updates note" });
 
   cite(s, "Louis DN, Neuro-Oncol 2021;23:1231 · Sahm F, Neuro-Oncol 2025;27:319 · Aldape K, Neuro-Oncol Adv 2025;7:vdae228 · Hawkins C, Brain Pathol 2025;35:e70018 · Wesseling P, Brain Pathol 2026;36:e70035 · Brat DJ, Neuro-Oncol 2026;28:2069");
   s.addNotes(
-`WHO CNS5 이후 나온 cIMPACT-NOW update를 짧게 정리.
-- Update 8: 수막종 grading. 1p del + 22q del/NF2 → grade 2 제안.
-- Update 9: methylation classifier 사용 원칙.
-- Update 10: 새 tumor type을 인정하는 기준. 기준 미충족 시 NEC로 보고.
-- Update 11: 40세 미만에서 EGFR amp나 +7/-10만으로 GBM 진단하지 말 것 (pediatric-type HGG 감별).
-- 오늘 핵심인 Update 12: IDH-mutant glioma grading 개정.`);
+`cIMPACT-NOW updates published after WHO CNS5.
+- Update 8: meningioma grading. 1p deletion with 22q deletion and/or NF2 variant upgrades a histologic grade 1 meningioma to grade 2.
+- Update 9: principles for using the DNA methylation classifier.
+- Update 10: criteria for accepting a new tumor type; tumors that do not meet them are reported as NEC.
+- Update 11: in patients under 40, EGFR amplification or +7/-10 alone should not establish GBM (consider pediatric-type HGG).
+- Update 12, today's focus: revised grading of IDH-mutant gliomas.`);
 }
 
 // ---------------- Slide 2: Update 12 algorithm ----------------
@@ -159,25 +159,25 @@ function lbl(slide, x, y, s, color = GRAY) {
   box(s, 8.35, oy, 1.35, oh, "Oligo\ngrade 3", { fill: PINK, color: "000000", bold: true, fs: 11.5, name: "O3" });
   arrow(s, 7.8, 2.5, 7.52, oy); lbl(s, 7.35, 2.75, "N");
   arrow(s, 8.75, 2.5, 9.02, oy); lbl(s, 9.05, 2.75, "Y");
-  s.addText("Oligodendroglioma: grading 개선 근거 없음 (기존 기준 유지)", { x: 5.6, y: 4.0, w: 4.1, h: 0.5,
+  s.addText("Oligodendroglioma: no new grading criteria", { x: 5.6, y: 4.0, w: 4.1, h: 0.5,
     fontSize: 11, color: GRAY, italic: true, margin: 0, isTextBox: true, align: "right" });
 
   // key changes
   s.addText(bullets([
-    { t: "Grade 4 criterion에 PDGFRA amplification 추가 (CDKN2A/B HD와 동급)", c: GOLD, b: true },
-    "Grade 2/3 경계: mitosis ≥3 / 2.4 mm² 수치 기준 제안, grade 3 분자 marker 명시",
-    "Histology grade 2/3여도 NGS · methylation CNV 결과로 upgrade 가능",
+    { t: "PDGFRA amplification added as a grade 4 criterion (same weight as CDKN2A/B HD)", c: GOLD, b: true },
+    "Grade 2 vs 3: numeric mitotic threshold (≥3 / 2.4 mm²) and molecular markers of grade 3",
+    "Histologic grade 2/3 tumors can be upgraded by NGS or methylation-array CNV",
   ], { fontSize: 14, paraSpaceAfter: 4 }), { x: 0.3, y: 5.5, w: 9.4, h: 1.25, valign: "top", margin: 0,
     isTextBox: true, objectName: "Key changes" });
 
   cite(s, "Figure: Park YW et al. Korean J Radiol 2026 (in press), Fig. 2 · Original criteria: Brat DJ et al. Neuro-Oncol 2026;28(9):2069-2089");
   s.addNotes(
 `Update 12 grading algorithm (Brat et al. 2026).
-1) MVP, necrosis, CDKN2A/B HD, 그리고 새로 PDGFRA amplification 중 하나라도 있으면 grade 4.
-2) 없으면 mitotic count ≥3/2.4 mm²이면 grade 3, 아니면 grade 2.
-3) 주황 박스: grade 3를 시사하는 분자 변화 (CDK4/6, CCND2 amp, RB1, PIK3CA/PIK3R1, EGFR, MYCN, methylation A_IDH_HG/G-CIMP-low).
-4) Oligodendroglioma는 grading을 바꿀 근거가 없었다고 결론.
-※ 그림 출처: Park YW, ..., Park JE. Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know. Korean J Radiol 2026 (in press) Fig. 2를 다시 그림. 기준 원문은 Brat 2026.`);
+1) Any of MVP, necrosis, CDKN2A/B HD or, newly, PDGFRA amplification → grade 4.
+2) Otherwise, mitotic count ≥3 per 2.4 mm² → grade 3; if not, grade 2.
+3) Orange box: molecular alterations that may suggest grade 3 (CDK4/6, CCND2 amp, RB1, PIK3CA/PIK3R1, EGFR, MYCN, methylation A_IDH_HG / G-CIMP-low).
+4) Oligodendroglioma: the working group found no new evidence to change grading.
+Figure redrawn from Park YW et al. Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know. Korean J Radiol 2026 (in press), Fig. 2. Criteria from Brat et al. 2026.`);
 }
 
 // ---------------- Slide 3: PDGFRA amplification ----------------
@@ -193,34 +193,34 @@ function lbl(slide, x, y, s, color = GRAY) {
   };
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.15, y: 1.05, w: 3.5, h: 5.7, rectRadius: 0.1,
     fill: { color: DARK }, line: { color: DARK }, objectName: "Stat panel" });
-  stat(1.2, "51 vs 126 mo", "Median OS: PDGFRA amp으로 grade 4 재분류 vs grade 3 유지 (HR 1.9, p=0.028)", "Richardson TE, Acta Neuropathol 2026 (n=1,140)");
-  stat(3.05, "18.8%", "Grade 2/3 IDH-mut astrocytoma의 PDGFRA amp (FISH). CDKN2A HD · CDK4 amp와 mutually exclusive", "Yang RR, Brain Pathol 2019 (n=160)");
-  stat(4.9, "24%", "실제 진료에서 molecular 결과로 grade 변경 (grade 3 → 4: 3례)", "Tauziède-Espariat A, Ann Pathol 2026 (12/50)");
+  stat(1.2, "51 vs 126 mo", "Median OS: reclassified to grade 4 by PDGFRA amp vs remaining grade 3 (HR 1.9, p=0.028)", "Richardson TE, Acta Neuropathol 2026 (n=1,140)");
+  stat(3.05, "18.8%", "PDGFRA amp in grade 2/3 IDH-mut astrocytoma (FISH); mutually exclusive with CDKN2A HD and CDK4 amp", "Yang RR, Brain Pathol 2019 (n=160)");
+  stat(4.9, "24%", "Grade changed by molecular results in routine practice (grade 3 → 4: 3 cases)", "Tauziède-Espariat A, Ann Pathol 2026 (12/50)");
 
   s.addText(bullets([
-    { t: "Update 12의 결론", b: true, c: GOLD },
+    { t: "Update 12 conclusion", b: true, c: GOLD },
     { t: "PDGFRA amp = highly aggressive behavior → CNS WHO grade 4", lvl: 1 },
-    { t: "근거", b: true, c: GOLD },
-    { t: "Yang 2019: PDGFRA amp → 가장 나쁜 risk group (mean OS 40.5 vs 71.5 mo)", lvl: 1 },
-    { t: "CATNON (IDH-mut anaplastic astrocytoma 432명): 독립 예후인자", lvl: 1 },
-    { t: "Virata 2026: 위 분자 변화가 있으면 grade 2/3의 median OS 67–82 mo vs 135–141 mo", lvl: 1 },
-    { t: "검출 방법", b: true, c: GOLD },
+    { t: "Evidence", b: true, c: GOLD },
+    { t: "Yang 2019: PDGFRA amp = highest-risk group (mean OS 40.5 vs 71.5 mo)", lvl: 1 },
+    { t: "CATNON (432 IDH-mut anaplastic astrocytomas): independent prognostic factor", lvl: 1 },
+    { t: "Virata 2026: grade 2/3 with these alterations, median OS 67–82 vs 135–141 mo", lvl: 1 },
+    { t: "Detection", b: true, c: GOLD },
     { t: "NGS CNV, methylation array CNV, FISH, SNP/CGH array", lvl: 1 },
-    { t: "PDGFRA IHC: amplification screening 도구로 제안", lvl: 1 },
+    { t: "PDGFRA IHC proposed as a screening tool", lvl: 1 },
     { t: "Pitfall", b: true, c: GOLD },
-    { t: "형태학적 grade 2/3 → CNV 검사 없으면 놓침", lvl: 1 },
+    { t: "Missed in histologic grade 2/3 tumors without CNV testing", lvl: 1 },
   ], { fontSize: 13.5, paraSpaceAfter: 3 }), { x: 3.95, y: 1.05, w: 5.75, h: 5.75, valign: "top", margin: 0,
     isTextBox: true, objectName: "PDGFRA evidence" });
 
   cite(s, "Brat DJ, Neuro-Oncol 2026 · Richardson TE, Acta Neuropathol 2026;152 · Yang RR, Brain Pathol 2019 · Tesileanu CMS, Neuro-Oncol 2021 · Virata MC, Neuro-Oncol 2026 · Tauziède-Espariat A, Brain Pathol 2026;e70142");
   s.addNotes(
-`PDGFRA amplification이 grade 4 criterion이 된 근거.
-- Validation (Richardson 2026, 1,140명): PDGFRA amp으로 grade 4가 된 군의 median OS 51.4개월, grade 3 유지군은 126.2개월 (HR 1.9). Grade 2→4 7례, 3→4 15례.
-- Yang 2019 (160명, FISH): PDGFRA amp 18.8%, CDKN2A HD 15.0%, CDK4 amp 18.1%로 서로 겹치지 않음. 3 risk group의 mean OS 40.5/62.9/71.5개월.
-- CATNON (Tesileanu 2021): IDH-mut anaplastic astrocytoma 432명에서 PDGFRA amp는 독립 예후인자.
-- 실제 진료 (Tauziède-Espariat 2026): 50례 중 12례 (24%)에서 grade 변경, grade 3→4가 3례.
-- 검출: NGS, methylation array CNV, FISH 등. IHC를 screening에 쓰자는 보고 (Brain Pathol 2026).
-※ CATNON final analysis: PDGFRA amp는 예후 인자이지만 TMZ 효과의 predictive marker는 아님.`);
+`Why PDGFRA amplification became a grade 4 criterion.
+- Validation (Richardson 2026, n=1,140): tumors reclassified to grade 4 by PDGFRA amp had median OS 51.4 months vs 126.2 months for tumors that stayed grade 3 (HR 1.9). 7 cases moved from grade 2 to 4, 15 from grade 3 to 4.
+- Yang 2019 (n=160, FISH): PDGFRA amp 18.8%, CDKN2A HD 15.0%, CDK4 amp 18.1%, mutually exclusive. Mean OS of the three risk groups: 40.5 / 62.9 / 71.5 months.
+- CATNON (Tesileanu 2021): PDGFRA amp was an independent prognostic factor in 432 IDH-mutant anaplastic astrocytomas.
+- Routine practice (Tauziede-Espariat 2026): grade changed in 12 of 50 cases (24%), including 3 grade 3 → 4.
+- Detection: NGS, methylation-array CNV, FISH; IHC proposed as a screening tool (Brain Pathol 2026).
+Caveat: in the CATNON final analysis PDGFRA amp was prognostic but did not predict benefit from temozolomide.`);
 }
 
 // ---------------- Slide 4: Imaging ----------------
@@ -239,30 +239,30 @@ function lbl(slide, x, y, s, color = GRAY) {
   ph(2.55, 3.25, 2.15, 2.1, "rCBV");
   s.addText([
     T("63/F, Astrocytoma, IDH-mutant", { bold: true, color: GOLD, breakLine: true }),
-    T("ADC · rCBV에서만 aggressive feature", { color: WHITE }),
+    T("Aggressive features on ADC and rCBV only", { color: WHITE }),
   ], { x: 0.3, y: 5.45, w: 4.4, h: 0.65, fontSize: 13, margin: 0, isTextBox: true, objectName: "Case caption" });
 
   s.addText(bullets([
-    { t: "T2-FLAIR mismatch: IDH-mut astrocytoma에 특이적, 민감도 낮음", b: true },
-    { t: "주로 non-enhancing 저등급 (≥55세 cohort: G2 25%, G3/4 0%)", lvl: 1 },
+    { t: "T2-FLAIR mismatch: specific for IDH-mut astrocytoma, low sensitivity", b: true },
+    { t: "Mostly non-enhancing lower grade (age ≥55 cohort: G2 25%, G3/4 0%)", lvl: 1 },
     { t: "Enhancement ≠ grade", b: true },
-    { t: "Non-enhancing high grade 존재, grade 2도 enhancement 가능", lvl: 1 },
+    { t: "High-grade tumors can be non-enhancing; grade 2 tumors can enhance", lvl: 1 },
     { t: "ADC ↓ / rCBV ↑ focus", b: true, c: GOLD },
-    { t: "Non-enhancing glioma에서 rCBV로 grade 4 구분 AUC 0.72", lvl: 1 },
-    { t: "Biopsy target + 병리에 molecular work-up 요청 근거", lvl: 1 },
-    { t: "PDGFRA amp 특이 영상 소견: 확립된 근거 없음", b: true },
-    { t: "→ 영상-병리 불일치 시 피드백이 핵심", lvl: 1 },
+    { t: "rCBV discriminates grade 4 in non-enhancing gliomas (AUC 0.72)", lvl: 1 },
+    { t: "Guides biopsy targeting and requests for molecular work-up", lvl: 1 },
+    { t: "No established imaging signature of PDGFRA amp", b: true },
+    { t: "→ Feedback to pathology when imaging and histology disagree", lvl: 1 },
   ], { fontSize: 13.5, paraSpaceAfter: 4 }), { x: 4.95, y: 1.05, w: 4.75, h: 5.6, valign: "top", margin: 0,
     isTextBox: true, objectName: "Imaging bullets" });
 
   cite(s, "Alfattal, Int J Surg Pathol 2026 · Ozono, J Neurooncol 2026 · Imai, J Clin Med 2025;14:6777 · Yang, AJNR 2025 · Kurokawa, Jpn J Radiol 2026;44:1534");
   s.addNotes(
-`(증례 영상을 placeholder 자리에 넣어 주세요.)
-- T2-FLAIR mismatch: 특이도는 높지만 민감도는 낮음. ≥55세 cohort에서 grade 2의 25%에서만 보였고 grade 3/4에서는 없었음 (Alfattal 2026). CDKN2A HD 증례가 mismatch-negative와 연관 (Ozono 2026).
-- Enhancement 여부만으로 grade를 판단할 수 없음 (위 cohort에서 grade 2의 50%가 enhancement).
-- Non-enhancing glioma에서 rCBV는 grade 4 구분 AUC 0.718 (Imai 2025).
-- CDKN2A HD 예측: poorly defined enhancing margin (OR 13.19, Yang AJNR 2025).
-- PDGFRA amp에 특이적인 영상 소견은 아직 확립된 근거가 없음. 이 증례처럼 ADC/CBV가 조직 grade보다 aggressive하면 병리에 feedback을 주는 것이 핵심.`);
+`(Insert the case images into the placeholders.)
+- T2-FLAIR mismatch: high specificity, low sensitivity. In a cohort aged ≥55 it was seen in 25% of grade 2 and in no grade 3/4 tumors (Alfattal 2026). All CDKN2A HD cases were mismatch-negative (Ozono 2026).
+- Enhancement alone does not determine grade (50% of grade 2 tumors enhanced in that cohort).
+- In non-enhancing gliomas, rCBV discriminated grade 4 with AUC 0.718 (Imai 2025).
+- CDKN2A HD was predicted by a poorly defined enhancing margin (OR 13.19, Yang AJNR 2025).
+- No imaging feature specific to PDGFRA amplification has been established. When ADC/CBV look more aggressive than the histologic grade, as in this case, feed that back to pathology.`);
 }
 
 // ---------------- Slide 5: Why it matters ----------------
@@ -273,10 +273,10 @@ function lbl(slide, x, y, s, color = GRAY) {
   // case flow
   const steps = [
     ["Initial", "Astrocytoma, IDH-mut, grade 3 (histology)"],
-    ["Radiology", "ADC · rCBV: aggressive → 병리에 피드백"],
-    ["Molecular", "PDGFRA amplification 확인"],
-    ["Integrated", "Grade 4로 재판독 (Update 12)"],
-    ["Treatment", "CCRT 시행"],
+    ["Radiology", "Aggressive on ADC · rCBV → feedback to pathology"],
+    ["Molecular", "PDGFRA amplification detected"],
+    ["Integrated", "Regraded to grade 4 (Update 12)"],
+    ["Treatment", "Concurrent chemoradiotherapy"],
   ];
   steps.forEach(([k, v], i) => {
     const y = 1.05 + i * 1.0;
@@ -295,29 +295,29 @@ function lbl(slide, x, y, s, color = GRAY) {
   const H = (t) => ({ text: t, options: { bold: true, color: "000000", fill: { color: GOLD }, align: "center" } });
   const C = (t, hi, ctr) => ({ text: t, options: { color: hi ? GOLD : WHITE, bold: !!hi, align: ctr ? "center" : "left", fill: { color: hi ? "332600" : DARK } } });
   s.addTable([
-    [H("Grade"), H("주요 치료 근거")],
-    [C("2", false, true), C("관찰 (GTR) / 잔존 non-enhancing → vorasidenib (INDIGO; 식약처 2026.1 허가)")],
-    [C("3", false, true), C("RT → adjuvant TMZ 12 cycles (CATNON: concurrent TMZ 이득 없음)")],
-    [C("4", true, true), C("RT + TMZ, 고등급 치료 (EANO) — vorasidenib 대상 아님", true)],
+    [H("Grade"), H("Treatment evidence")],
+    [C("2", false, true), C("Observation after GTR / residual non-enhancing → vorasidenib (INDIGO; MFDS approval Jan 2026)")],
+    [C("3", false, true), C("RT → adjuvant TMZ × 12 cycles (CATNON; no significant benefit of concurrent TMZ)")],
+    [C("4", true, true), C("Grade 3 or GBM-type regimen (ASCO-SNO); not a vorasidenib candidate", true)],
   ], { x: 4.2, y: 1.05, w: 5.5, colW: [0.8, 4.7], fontSize: 12, fontFace: "Calibri",
     border: { type: "solid", pt: 0.75, color: "404040" }, valign: "middle", rowH: [0.34, 0.66, 0.66, 0.66],
     margin: [3, 6, 3, 6], objectName: "Treatment table" });
 
   s.addText(bullets([
     { t: "Take-home", b: true, c: GOLD },
-    { t: "Grade = 치료 강도 · trial 적격성 · 예후 상담을 결정", lvl: 1 },
-    { t: "ADC/rCBV가 조직 grade보다 aggressive하면 PDGFRA · CDKN2A 등 CNV 확인 요청", lvl: 1 },
-    { t: "영상 판독이 molecular upgrade의 trigger가 될 수 있음", lvl: 1 },
+    { t: "Grade drives treatment intensity, trial eligibility and counseling", lvl: 1 },
+    { t: "If ADC/rCBV look worse than the histologic grade, ask for CNV (PDGFRA, CDKN2A/B)", lvl: 1 },
+    { t: "The radiology report can trigger a molecular upgrade", lvl: 1 },
   ], { fontSize: 13.5, paraSpaceAfter: 4 }), { x: 4.2, y: 3.65, w: 5.5, h: 2.9, valign: "top", margin: 0,
     isTextBox: true, objectName: "Take-home" });
 
-  cite(s, "van den Bent MJ, Lancet Oncol 2021;22:813 & 2026;27:45 · Mellinghoff IK, NEJM 2023;389:589 · Weller M, Nat Rev Clin Oncol 2021;18:170 · Park YW, Korean J Radiol 2026 (in press)");
+  cite(s, "van den Bent MJ, Lancet Oncol 2021;22:813 & 2026;27:45 · Mellinghoff IK, NEJM 2023;389:589 · Mohile NA, J Clin Oncol 2022;40:403 · Park YW, Korean J Radiol 2026 (in press)");
   s.addNotes(
-`이 증례: 처음에는 조직학적으로 grade 3. 영상에서 ADC/CBV상 aggressive해 병리에 feedback → PDGFRA amplification 확인 → cIMPACT-NOW 12에 따라 grade 4로 재판독 → CCRT 시행.
-- Grade 3 IDH-mut astrocytoma: CATNON에서 adjuvant TMZ는 생존 이득 (IDH-mut에서 median OS 12.5 vs 6.0년, HR 0.54), concurrent TMZ는 유의한 이득 없음 (HR 0.81, NS).
-- Grade 2: INDIGO에서 vorasidenib이 PFS 27.7 vs 11.1개월로 개선 (잔존 non-enhancing grade 2 대상). FDA 2024년 8월, 국내 식약처 2026년 1월 허가 (Park YW, KJR 2026). Grade 4로 바뀌면 대상이 아님.
-- Grade 4: 고등급 치료 (RT + TMZ).
-- 메시지: 영상의학과의 feedback이 molecular upgrade와 치료 변경으로 이어진 증례.`);
+`This case: histologic grade 3 at first. ADC and CBV looked aggressive, so we fed this back to pathology → PDGFRA amplification found → regraded to grade 4 under cIMPACT-NOW update 12 → concurrent chemoradiotherapy.
+- Grade 3 IDH-mut astrocytoma: in CATNON, adjuvant TMZ improved survival (IDH-mut median OS 12.5 vs 6.0 years, HR 0.54); concurrent TMZ did not reach significance (HR 0.81).
+- Grade 2: in INDIGO, vorasidenib improved PFS (27.7 vs 11.1 months) in residual non-enhancing grade 2 tumors. FDA approval Aug 2024, Korean MFDS Jan 2026 (Park YW, KJR 2026). A grade 4 tumor is not a candidate.
+- Grade 4 IDH-mut: ASCO-SNO 2022 says these patients may follow either the grade 3 astrocytoma or the IDH-wildtype GBM recommendations.
+- Message: radiology feedback led to a molecular upgrade and a change in treatment.`);
 }
 
 (async () => {
