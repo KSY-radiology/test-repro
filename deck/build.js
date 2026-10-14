@@ -94,7 +94,7 @@ function lbl(slide, x, y, s, color = GRAY) {
     R(["9", "Neuro-Oncol Adv 2025", "DNA methylation profiling", "Classifier = one tool within integrated diagnosis (not stand-alone); layered report examples"]),
     R(["10", "Brain Pathol 2025", "Defining new tumor types", "Clinical phenotype + methylation cluster + driver + histology, ≥2 independent reports; otherwise NEC"]),
     R(["11", "Brain Pathol 2025", "IDH/H3-wt HGG, PF EPN", "Age <40: EGFR amp or +7/−10 alone insufficient for GBM; caution with TERTp-only low-grade tumors"]),
-    R(["12", "Neuro-Oncol 2026", "IDH-mutant glioma grading", "PDGFRA amp → grade 4; mitoses ≥3/2.4 mm² → grade 3; molecular markers of grade 3"], true),
+    R(["12", "Neuro-Oncol 2026", "IDH-mutant glioma grading", "PDGFRA amp → grade 4; ≥3 mitoses/2.4 mm² or Table 2 alterations → grade 3; new subgroups"], true),
   ];
   s.addTable(rows, { x: 0.4, y: 1.82, w: 9.2, colW: [0.8, 1.55, 1.95, 4.9], fontSize: 11.5, fontFace: "Calibri",
     border: { type: "solid", pt: 0.75, color: "404040" }, valign: "middle", rowH: [0.34, 0.68, 0.68, 0.68, 0.68, 0.68],
@@ -165,8 +165,8 @@ function lbl(slide, x, y, s, color = GRAY) {
   // key changes
   s.addText(bullets([
     { t: "PDGFRA amplification added as a grade 4 criterion (same weight as CDKN2A/B HD)", c: GOLD, b: true },
-    "Grade 2 vs 3: numeric mitotic threshold (≥3 / 2.4 mm²) and molecular markers of grade 3",
-    "Histologic grade 2/3 tumors can be upgraded by NGS or methylation-array CNV",
+    "Grade 3 = ≥3 mitoses / 2.4 mm² (10 HPF of 0.24 mm²) or any Table 2 molecular alteration",
+    "Mitotic cut-off rests on 2 studies; authors call for validation before WHO adoption",
   ], { fontSize: 14, paraSpaceAfter: 4 }), { x: 0.3, y: 5.5, w: 9.4, h: 1.25, valign: "top", margin: 0,
     isTextBox: true, objectName: "Key changes" });
 
@@ -175,8 +175,9 @@ function lbl(slide, x, y, s, color = GRAY) {
 `Update 12 grading algorithm (Brat et al. 2026).
 1) Any of MVP, necrosis, CDKN2A/B HD or, newly, PDGFRA amplification → grade 4.
 2) Otherwise, mitotic count ≥3 per 2.4 mm² → grade 3; if not, grade 2.
-3) Orange box: molecular alterations that may suggest grade 3 (CDK4/6, CCND2 amp, RB1, PIK3CA/PIK3R1, EGFR, MYCN, methylation A_IDH_HG / G-CIMP-low).
-4) Oligodendroglioma: the working group found no new evidence to change grading.
+3) Orange box: Table 2 alterations. In Table 1 of the paper these are part of the grade 3 definition, so a histologic grade 2 tumor with, for example, CDK4 amplification becomes grade 3. G-CIMP-low / A_IDH_HG means at least grade 3 (classifier score >0.90 required).
+4) 2.4 mm² equals 10 high-power fields of 0.24 mm². The threshold comes from Kros 2018 (455 patients from CATNON and EORTC 22033; prognostic for PFS, not OS) and Tran 2023 (100 patients). The authors say more studies are needed before WHO adopts it.
+5) Oligodendroglioma: no new grading criteria. Brisk mitoses = ≥6 per 10 HPF of 0.24 mm². Mitosis-only grade 3 tumors without MRI enhancement may do better.
 Figure redrawn from Park YW et al. Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know. Korean J Radiol 2026 (in press), Fig. 2. Criteria from Brat et al. 2026.`);
 }
 
@@ -186,40 +187,42 @@ Figure redrawn from Park YW et al. Imaging of IDH-Mutant Gliomas in the Era of I
   s.addText("PDGFRA Amplification → WHO Grade 4", { placeholder: "title" });
 
   // stat column
-  const stat = (y, big, small, src) => {
-    s.addText(big, { x: 0.3, y, w: 3.2, h: 0.62, fontSize: 30, bold: true, color: GOLD, margin: 0, isTextBox: true, objectName: "Stat" });
+  const stat = (y, big, small, src, fs = 30) => {
+    s.addText(big, { x: 0.3, y, w: 3.2, h: 0.62, fontSize: fs, bold: true, color: GOLD, margin: 0, isTextBox: true, objectName: "Stat" });
     s.addText(small, { x: 0.3, y: y + 0.62, w: 3.2, h: 0.62, fontSize: 11.5, color: WHITE, margin: 0, valign: "top", isTextBox: true });
     s.addText(src, { x: 0.3, y: y + 1.22, w: 3.2, h: 0.25, fontSize: 9, color: GRAY, italic: true, margin: 0, isTextBox: true });
   };
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.15, y: 1.05, w: 3.5, h: 5.7, rectRadius: 0.1,
     fill: { color: DARK }, line: { color: DARK }, objectName: "Stat panel" });
-  stat(1.2, "51 vs 126 mo", "Median OS: reclassified to grade 4 by PDGFRA amp vs remaining grade 3 (HR 1.9, p=0.028)", "Richardson TE, Acta Neuropathol 2026 (n=1,140)");
-  stat(3.05, "18.8%", "PDGFRA amp in grade 2/3 IDH-mut astrocytoma (FISH); mutually exclusive with CDKN2A HD and CDK4 amp", "Yang RR, Brain Pathol 2019 (n=160)");
-  stat(4.9, "24%", "Grade changed by molecular results in routine practice (grade 3 → 4: 3 cases)", "Tauziède-Espariat A, Ann Pathol 2026 (12/50)");
+  stat(1.2, "3.1 vs 9.3 yr", "CATNON grade 3: median OS with vs without PDGFRA amp (HR 3.51, independent of CDKN2A/B HD)", "van den Bent, Lancet Oncol 2026 (n=440)");
+  stat(3.05, "4–6% → 8–15%", "Frequency of PDGFRA amp: grade 2–3 vs grade 4 IDH-mut astrocytoma", "Brat DJ, Neuro-Oncol 2026 (Update 12)", 24);
+  stat(4.9, "51 vs 126 mo", "Post-publication validation: regraded to grade 4 by PDGFRA amp vs remaining grade 3 (HR 1.9)", "Richardson TE, Acta Neuropathol 2026 (n=1,140)");
 
   s.addText(bullets([
-    { t: "Update 12 conclusion", b: true, c: GOLD },
-    { t: "PDGFRA amp = highly aggressive behavior → CNS WHO grade 4", lvl: 1 },
-    { t: "Evidence", b: true, c: GOLD },
-    { t: "Yang 2019: PDGFRA amp = highest-risk group (mean OS 40.5 vs 71.5 mo)", lvl: 1 },
-    { t: "CATNON (432 IDH-mut anaplastic astrocytomas): independent prognostic factor", lvl: 1 },
-    { t: "Virata 2026: grade 2/3 with these alterations, median OS 67–82 vs 135–141 mo", lvl: 1 },
+    { t: "Update 12 rule for a grading marker", b: true, c: GOLD },
+    { t: "OS association in ≥2 independent studies; grade 4 = median OS <6 yr", lvl: 1 },
+    { t: "Multivariable evidence", b: true, c: GOLD },
+    { t: "CATNON HR 3.51 · Yang 2020 HR 2.90 (n=155) · Ghosh 2025 HR 1.9 (n=998)", lvl: 1 },
+    { t: "Dissent", b: true, c: GOLD },
+    { t: "Virata 2026: univariable HR 4.5, not significant on multivariable", lvl: 1 },
     { t: "Detection", b: true, c: GOLD },
-    { t: "NGS CNV, methylation array CNV, FISH, SNP/CGH array", lvl: 1 },
-    { t: "PDGFRA IHC proposed as a screening tool", lvl: 1 },
+    { t: "NGS, methylation-array CNV, FISH, SNP/CGH array; IHC for screening", lvl: 1 },
+    { t: "No copy-number cut-off defined in Update 12", lvl: 1 },
     { t: "Pitfall", b: true, c: GOLD },
     { t: "Missed in histologic grade 2/3 tumors without CNV testing", lvl: 1 },
   ], { fontSize: 13.5, paraSpaceAfter: 3 }), { x: 3.95, y: 1.05, w: 5.75, h: 5.75, valign: "top", margin: 0,
     isTextBox: true, objectName: "PDGFRA evidence" });
 
-  cite(s, "Brat DJ, Neuro-Oncol 2026 · Richardson TE, Acta Neuropathol 2026;152 · Yang RR, Brain Pathol 2019 · Tesileanu CMS, Neuro-Oncol 2021 · Virata MC, Neuro-Oncol 2026 · Tauziède-Espariat A, Brain Pathol 2026;e70142");
+  cite(s, "Brat DJ, Neuro-Oncol 2026;28:2069 · van den Bent MJ, Lancet Oncol 2026;27:45 · Yang RR, Brain Pathol 2020;30:541 · Ghosh HS, Neuro-Oncol 2025;27:993 · Virata MC, Neuro-Oncol 2026 · Richardson TE, Acta Neuropathol 2026");
   s.addNotes(
-`Why PDGFRA amplification became a grade 4 criterion.
-- Validation (Richardson 2026, n=1,140): tumors reclassified to grade 4 by PDGFRA amp had median OS 51.4 months vs 126.2 months for tumors that stayed grade 3 (HR 1.9). 7 cases moved from grade 2 to 4, 15 from grade 3 to 4.
-- Yang 2019 (n=160, FISH): PDGFRA amp 18.8%, CDKN2A HD 15.0%, CDK4 amp 18.1%, mutually exclusive. Mean OS of the three risk groups: 40.5 / 62.9 / 71.5 months.
-- CATNON (Tesileanu 2021): PDGFRA amp was an independent prognostic factor in 432 IDH-mutant anaplastic astrocytomas.
-- Routine practice (Tauziede-Espariat 2026): grade changed in 12 of 50 cases (24%), including 3 grade 3 → 4.
-- Detection: NGS, methylation-array CNV, FISH; IHC proposed as a screening tool (Brain Pathol 2026).
+`Why PDGFRA amplification became a grade 4 criterion (Update 12, p.2071 and Conclusions).
+- Rule: a grading marker needs an OS association in at least 2 independent studies, ideally with rising frequency at higher grade and at progression. Grade 4 benchmark: median OS <6 years (literature 4.1-5.9).
+- Frequency: 4-6% of grade 2-3 and 8-15% of grade 4 IDH-mutant astrocytomas. Little overlap with other poor-risk markers.
+- Key evidence: CATNON, grade 3 IDH-mutant astrocytomas including CDKN2A/B-deleted cases, n=440. PDGFRA-amplified tumors: median OS 3.1 vs 9.3 years, HR 3.51 (2.21-5.58), multivariable, independent of CDKN2A/B homozygous deletion.
+- Supporting: Yang 2020 (n=155, HR 2.90), Ghosh 2025 (n=998, HR 1.9), Shirahata 2018, Richardson & Walker 2020.
+- Dissent acknowledged in the paper: Virata 2026, univariable HR 4.5 but not significant on multivariable analysis.
+- After publication, Richardson 2026 (n=1,140): regraded grade 4 median OS 51.4 vs 126.2 months for tumors staying grade 3 (HR 1.9).
+- Update 12 does not define a copy-number cut-off for amplification. PDGFRA IHC (>=10% strong staining) is a screening tool; confirm with FISH or CNV.
 Caveat: in the CATNON final analysis PDGFRA amp was prognostic but did not predict benefit from temozolomide.`);
 }
 
@@ -243,21 +246,23 @@ Caveat: in the CATNON final analysis PDGFRA amp was prognostic but did not predi
   ], { x: 0.3, y: 5.45, w: 4.4, h: 0.65, fontSize: 13, margin: 0, isTextBox: true, objectName: "Case caption" });
 
   s.addText(bullets([
-    { t: "T2-FLAIR mismatch: specific for IDH-mut astrocytoma, low sensitivity", b: true },
-    { t: "Mostly non-enhancing lower grade (age ≥55 cohort: G2 25%, G3/4 0%)", lvl: 1 },
-    { t: "Enhancement ≠ grade", b: true },
-    { t: "High-grade tumors can be non-enhancing; grade 2 tumors can enhance", lvl: 1 },
+    { t: "Update 12 on imaging", b: true, c: GOLD },
+    { t: "Enhancement or rapid growth → molecular testing", lvl: 1 },
+    { t: "Slow-growing, T2-bright, non-enhancing + low-grade biopsy → grade 2 with fair confidence", lvl: 1 },
+    { t: "Pre-/post-op tumor size: most consistent prognostic factor", lvl: 1 },
+    { t: "T2-FLAIR mismatch: specific, low sensitivity", b: true },
+    { t: "Absent in all CDKN2A/B-deleted tumors (n=5)", lvl: 1 },
     { t: "ADC ↓ / rCBV ↑ focus", b: true, c: GOLD },
-    { t: "rCBV discriminates grade 4 in non-enhancing gliomas (AUC 0.72)", lvl: 1 },
-    { t: "Guides biopsy targeting and requests for molecular work-up", lvl: 1 },
-    { t: "No established imaging signature of PDGFRA amp", b: true },
+    { t: "rCBV separates grade 4 in non-enhancing gliomas (AUC 0.72); biopsy target", lvl: 1 },
+    { t: "No imaging signature of PDGFRA amp", b: true },
     { t: "→ Feedback to pathology when imaging and histology disagree", lvl: 1 },
-  ], { fontSize: 13.5, paraSpaceAfter: 4 }), { x: 4.95, y: 1.05, w: 4.75, h: 5.6, valign: "top", margin: 0,
+  ], { fontSize: 13, paraSpaceAfter: 4 }), { x: 4.95, y: 1.05, w: 4.75, h: 5.6, valign: "top", margin: 0,
     isTextBox: true, objectName: "Imaging bullets" });
 
-  cite(s, "Alfattal, Int J Surg Pathol 2026 · Ozono, J Neurooncol 2026 · Imai, J Clin Med 2025;14:6777 · Yang, AJNR 2025 · Kurokawa, Jpn J Radiol 2026;44:1534");
+  cite(s, "Brat DJ, Neuro-Oncol 2026 (Fig. 1, Conclusions) · Ozono, J Neurooncol 2026 · Imai, J Clin Med 2025;14:6777 · Kurokawa, Jpn J Radiol 2026;44:1534");
   s.addNotes(
 `(Insert the case images into the placeholders.)
+- Update 12 itself: molecular testing should be pursued when imaging shows contrast enhancement or relatively rapid progression; a slowly growing, T2-bright, non-enhancing lesion with a low-grade biopsy can be called grade 2 with fairly high confidence without advanced testing. Pre- and post-operative tumor volume and MRI growth rate are the most consistent clinical prognostic factors; the prognostic value of enhancement is disputed.
 - T2-FLAIR mismatch: high specificity, low sensitivity. In a cohort aged ≥55 it was seen in 25% of grade 2 and in no grade 3/4 tumors (Alfattal 2026). All CDKN2A HD cases were mismatch-negative (Ozono 2026).
 - Enhancement alone does not determine grade (50% of grade 2 tumors enhanced in that cohort).
 - In non-enhancing gliomas, rCBV discriminated grade 4 with AUC 0.718 (Imai 2025).

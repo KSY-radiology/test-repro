@@ -113,9 +113,10 @@ C.push(P("**핵심 원저**: Brat DJ, Aldape K, French PJ, Louis DN, Nasrallah M
 C.push(P("**발표 Figure 출처**: Park YW, Wagner A, Karschnia P, Vollmuth P, Sahm F, Ahn SS, Kim HS, Park JE. *Imaging of IDH-Mutant Gliomas in the Era of IDH Inhibitors: What Radiologists Need to Know.* Korean J Radiol 2026 (in press), Fig. 2", { align: AlignmentType.CENTER, p: { spacing: { after: 360 } } }));
 
 C.push(...BOX("이 노트의 출처와 한계 (발표 전 반드시 숙지)", [
-  "**Update 12 본문은 초록만 확인**했다. PMC 전문 본문이 이 환경에서 열람되지 않았음 → 원문 Table의 세부 정의·인용 수치는 **[원문 확인 권장]**. Update 12의 내용은 ① PubMed 초록 ② Update 12를 직접 인용한 2차 문헌(Richardson 2026 전문, Tralongo 2026 리뷰 전문, Tauziède-Espariat 2026 IHC 전문·Ann Pathol 초록) ③ Park YW KJR 2026 Fig. 2로 재구성.",
-  "**전문을 직접 읽은 문헌**: Update 3, Update 5, Update 10, Update 11, Virata 2026, Richardson 2026, CATNON methylation 2021(Tesileanu), PDGFRA IHC 2026, Tralongo 2026(methylation 리뷰), Kurokawa 2026(Jpn J Radiol), Ozono 2026.",
-  "**초록만 확인한 문헌**: WHO CNS5 요약(Louis 2021), Update 6–9, Yang 2019, CATNON 2021·2026, INDIGO, ASCO-SNO 2022, EANO 2021, Alfattal, Yang AJNR, Singh, Imai, Jo, Wong 등.",
+  "**Update 12는 원문 PDF 전체(본문, Table 1·2, Figure 1, 참고문헌)를 읽고 반영**했다(Neuro-Oncol 2026;28(9):2069–2089). 5장은 원문 기준으로 다시 썼고, 이전 판에서 2차 문헌으로 추정했던 부분을 바로잡았다.",
+  "**전문을 직접 읽은 다른 문헌**: Update 3, Update 5, Update 10, Update 11, Virata 2026, Richardson 2026, CATNON methylation 2021(Tesileanu), PDGFRA IHC 2026, Tralongo 2026(methylation 리뷰), Kurokawa 2026(Jpn J Radiol), Ozono 2026.",
+  "**Update 12가 인용했지만 원문을 직접 보지 않은 연구**(Ghosh 2025, Kros 2018, Tran 2023, Shirahata 2018, POLA 등)는 **Update 12에 적힌 수치 그대로** 옮겼다.",
+  "**초록만 확인한 문헌**: WHO CNS5 요약(Louis 2021), Update 6–9, Yang 2020, CATNON 2021·2026, INDIGO, ASCO-SNO 2022, EANO 2021, Alfattal, Yang AJNR, Singh, Imai, Jo, Wong 등.",
   "**Update 1, 2, 4는 PubMed에 초록이 없음** → 제목 수준의 내용만 적고 그 이상은 **[보충]** 으로 표시.",
   "PMC 텍스트에서 이탤릭 유전자명이 빠지는 문제가 있어, Virata 2026의 유전자별 수치는 **본문 나열 순서로 대응** → **[원문 확인 권장]**.",
   "표기: **[보충]** = 다른 문헌·일반 지식, **[제안]** = 필자의 실무 제안, **[원문 확인 권장]** = 원문 대조 필요.",
@@ -138,9 +139,9 @@ C.push(...B([
 ]));
 C.push(...BOX("30초 요약 (발표 첫머리·마무리용)", [
   "WHO CNS5 이후에도 cIMPACT-NOW가 grading을 계속 다듬고 있고, 2026년 Update 12에서 **PDGFRA amplification이 IDH-mutant astrocytoma의 grade 4 기준**이 됐다.",
-  "근거는 여러 후향적 코호트와 CATNON 분자 분석이며, 1,140명 validation에서 PDGFRA amp으로 grade 4가 된 환자의 median OS는 51.4개월로 grade 3 유지군(126.2개월)보다 짧았다.",
+  "핵심 근거는 CATNON 분자 분석으로, grade 3 환자 중 PDGFRA amp이 있으면 median OS가 3.1년(없으면 9.3년)이었고 이는 CDKN2A/B HD와 독립적이었다.",
   "PDGFRA amp 자체의 영상 소견은 없지만, 이 환자처럼 **ADC·rCBV가 조직 grade보다 나쁘면** 영상의학과의 피드백이 분자 재검토와 grade 상향, 치료 변경으로 이어질 수 있다.",
-  "English: \"Update 12 made PDGFRA amplification a grade 4 criterion. Imaging cannot detect it, but discordant ADC/rCBV can trigger the molecular work-up that changes grade and treatment.\"",
+  "English: \"Update 12 made PDGFRA amplification a grade 4 criterion: in CATNON, PDGFRA-amplified grade 3 tumors had a median OS of 3.1 vs 9.3 years, independent of CDKN2A/B. Imaging cannot detect it, but discordant ADC/rCBV can trigger the molecular work-up that changes grade and treatment.\"",
 ], GREEN));
 
 // =============== 1. Summary ===============
@@ -148,16 +149,17 @@ C.push(H1("1. 한눈에 보는 핵심 요약"));
 C.push(...BOX("Take-home messages", [
   "WHO CNS5(2021): **Astrocytoma, IDH-mutant = 단일 type, CNS WHO grade 2–4**. Grade 4 = MVP 또는 necrosis 또는 **CDKN2A/B homozygous deletion(HD)**.",
   "Update 12(2026): **PDGFRA amplification → grade 4** (\"highly aggressive clinical behavior, consistent with CNS WHO grade 4\").",
-  "Grade 2/3 경계: **mitotic count ≥3 / 2.4 mm²** 제안(\"could be considered\"). 이전(Update 5)에는 검증된 수치가 없었고 관행상 전체 검체 ≥2 mitoses.",
-  "Grade 3 시사 분자 변화: PIK3CA/PIK3R1 mutation, EGFR alteration, MYCN amp, RB pathway(CDK4·CDK6·CCND2 amp, RB1 HD/mutation, CDKN2A mutation), methylation **G-CIMP-low / A_IDH_HG**(다른 기준에 따라 grade 3 또는 4).",
+  "Grade 2/3 경계: **≥3 mitoses / 2.4 mm²**(= 0.24 mm² HPF 10개). 근거는 Kros 2018(455명, PFS만 유의)과 Tran 2023(100명). 원문도 \"WHO 기준으로 완전히 승인하려면 추가 연구 필요\"라고 명시.",
+  "**Grade 3 정의에 분자 기준 포함(Table 1)**: CDK4·CDK6·CCND2 amp, RB1 HD/mutation, CDKN2A mutation, PIK3CA/PIK3R1 mutation, EGFR alteration, MYCN amp, methylation **G-CIMP-low / A_IDH_HG**(최소 grade 3) → 조직 grade 2라도 이 중 하나면 grade 3.",
   "Oligodendroglioma: grading을 바꿀 새 근거 없음. 단 mitosis만 높고 necrosis·MVP·CDKN2A/B HD·**MRI 조영증강이 없는** grade 3은 생존이 길 수 있음.",
-  "PDGFRA amp → grade 4 근거: Yang 2019(18.8%, 최고위험군), CATNON(독립 예후인자), Virata 2026(단독 alteration HR 4.5), **Richardson 2026 validation(51.4 vs 126.2개월, HR 1.9)**.",
-  "이견: Virata 2026은 PDGFRA alteration을 grade 4가 아닌 **intermediate** 군으로 봄. 다변량에서는 독립 유의성 미달.",
+  "PDGFRA amp 빈도: grade 2·3의 **4–6%**, grade 4의 **8–15%**.",
+  "**핵심 근거 = CATNON**(grade 3 IDH-mut astrocytoma 440명): PDGFRA amp **OS 3.1년 vs 9.3년, HR 3.51, 다변량, CDKN2A/B HD와 독립** → grade 4 기준치(median OS <6년)에 해당. 보조: Yang 2020(HR 2.90), Ghosh 2025(HR 1.9), Shirahata 2018, Richardson & Walker 2020.",
+  "이견: Virata 2026은 다변량에서 유의하지 않았고 intermediate로 봄 — **Update 12 원문도 이를 인용하며 인정**. 발표 후 독립 검증(Richardson 2026, 1,140명): 51.4 vs 126.2개월(HR 1.9).",
   "검출: FISH, methylation array CNV, NGS, SNP/CGH array. **PDGFRA IHC**(≥10% 강양성)는 민감도 100%, 특이도 89%의 screening 도구.",
-  "영상: PDGFRA amp 특이 소견은 **없음**. T2-FLAIR mismatch 소실, poorly defined enhancing margin, ADC↓·rCBV↑는 고위험 단서.",
+  "영상: PDGFRA amp 특이 소견은 **없음**. Update 12는 **조영증강이나 빠른 진행이 보이면 분자 검사를 하라**고 명시하고, **천천히 자라는 T2 고신호 비조영 병변 + 저등급 생검이면 분자 검사 없이도 grade 2**를 진단할 수 있다고 함. 수술 전·후 종양 크기가 가장 일관된 예후 인자.",
   "치료: grade 3 = RT → adjuvant TMZ(CATNON), grade 4 IDH-mut = **grade 3 또는 GBM 권고 중 선택 가능**(ASCO-SNO 2022), vorasidenib은 grade 2 근거(INDIGO).",
 ]));
-C.push(SRC("Brat 2026 (abstract); Brat 2020 Update 5 (PMC8443062); Richardson 2026 (PMC13391642); Virata 2026 (PMC13437890); Tauziède-Espariat, Brain Pathol 2026 (PMC13535536); Mohile, J Clin Oncol 2022 (abstract)"));
+C.push(SRC("Brat 2026 (원문 전체); Brat 2020 Update 5 (PMC8443062); Richardson 2026 (PMC13391642); Virata 2026 (PMC13437890); Tauziède-Espariat, Brain Pathol 2026 (PMC13535536); Mohile, J Clin Oncol 2022 (abstract)"));
 
 // =============== 2. Biology ===============
 C.push(H1("2. 기초 생물학 — 질문의 출발점"));
@@ -181,9 +183,9 @@ C.push(...B([
   "  PI3K: PIK3CA, PIK3R1 mutation",
   "Tesileanu 2022 systematic review(44편): 예후와의 연관이 **여러 연구에서 재현된** marker — non-canonical IDH mutation, PI3K mutation, CDKN2A/B HD, **PDGFRA amp**, CN-neutral 17p loss, 19q loss, G-CIMP-low, high total CNV, high TMB",
   "  영향을 받는 경로: RB 신호, RTK-PI3K-mTOR 신호, genomic stability, (epi)genetic gene regulation",
-  "Yang 2019: PDGFRA amp, CDKN2A HD, CDK4 amp가 **서로 배타적** → 같은 '증식 신호 활성화'에 이르는 서로 다른 경로로 해석 가능 [보충]",
+  "Yang 2020: PDGFRA amp, CDKN2A HD, CDK4 amp가 **서로 배타적** → 같은 '증식 신호 활성화'에 이르는 서로 다른 경로로 해석 가능 [보충]",
 ]));
-C.push(SRC("Tralongo 2026 (PMC13498940); Tesileanu, Eur J Cancer 2022 (10.1016/j.ejca.2022.08.016, abstract); Yang 2019 (abstract)"));
+C.push(SRC("Tralongo 2026 (PMC13498940); Tesileanu, Eur J Cancer 2022 (10.1016/j.ejca.2022.08.016, abstract); Yang 2020 (abstract)"));
 
 C.push(H2("2-3. G-CIMP와 methylation class — 헷갈리기 쉬운 용어"));
 C.push(...T(["용어", "정의·유래", "Grading에서의 위치"], [
@@ -274,7 +276,7 @@ C.push(...T(["#", "연도·저널", "주제", "핵심 내용"], [
   ["9", "2025 Neuro-Oncol Adv", "DNA methylation profiling", "Classifier = 통합 진단의 한 도구, layered report 예시, backward compatibility"],
   ["10", "2025 Brain Pathol", "새 tumor type 정의 기준", "Clinical phenotype(영상 포함) 필수 + cluster·driver·조직, ≥2 독립 보고. 미충족 시 NEC"],
   ["11", "2025 Brain Pathol", "IDH/H3-wt HGG, PF ependymoma", "<40세 EGFR amp·+7/−10 단독 GBM 금지, TERTp-only 신중, PDGFRA 등은 <25세 pedHGG marker, EZHIP IHC"],
-  ["**12**", "**2026 Neuro-Oncol**", "**IDH-mutant glioma grading**", "**PDGFRA amp → grade 4**, mitosis ≥3/2.4 mm² → grade 3, grade 3 분자 marker, oligo 개정 없음"],
+  ["**12**", "**2026 Neuro-Oncol**", "**IDH-mutant glioma grading**", "**PDGFRA amp → grade 4**, ≥3 mitoses/2.4 mm² 또는 Table 2 분자 변화 → grade 3, 새 subgroup 3개, oligo 개정 없음"],
 ], [0.5, 1.6, 2.4, 4.7], { highlight: (r) => r[0] === "**12**" || r[0] === "5" }));
 C.push(SRC("PubMed metadata/abstract/full text — Update 1 (10.1007/s00401-018-1808-0), 2 (10.1007/s00401-018-1826-y), 3 (PMC6204285), 4 (10.1007/s00401-019-01987-0), 5 (PMC8443062), 6 (10.1111/bpa.12832), 7 (10.1111/bpa.12866), 8 (10.1093/neuonc/noae170), 9 (10.1093/noajnl/vdae228), 10 (PMC12488253), 11 (PMC12695693), 12 (10.1093/neuonc/noag108)"));
 
@@ -347,76 +349,213 @@ C.push(...B([
 C.push(SRC("Wesseling P, Brain Pathol 2025;36:e70035 (PMC12695693 전문, abstract); Kurokawa 2026"));
 
 // =============== 5. Update 12 ===============
-C.push(H1("5. cIMPACT-NOW Update 12 상세"));
-C.push(H2("5-1. 목적과 저자"));
+C.push(H1("5. cIMPACT-NOW Update 12 상세 (원문 전체 기준)"));
+C.push(H2("5-1. 배경·목적·방법"));
 C.push(...B([
-  "Working group이 IDH-mutant glioma 문헌을 검토해 **pathology-based risk stratification·grading 개선** 기회를 평가",
-  "특히 **grade 2와 3의 경계** — \"치료 결정이 risk assessment에 의존하기 때문\"",
-  "새로 기술된 IDH-mutant glioma subgroup 평가, 치료 결정의 **다학제적 측면** 고려",
-  "저자: Brat(1저자, Update 3·5도 1저자), Aldape, French, Louis, Nasrallah, Reifenberger, Reuss, Touat, van den Bent(CATNON PI), Wesseling, Figarella-Branger — 신경병리 + 신경종양",
+  "Update 5와 CNS5는 주로 **grade 4 marker**를 세우는 데 집중 → **grade 2와 3의 경계**를 개선할 필요가 남음",
+  "CNS5의 grade 2 vs 3 구분: astrocytoma = mitotic activity + histologic anaplasia / oligodendroglioma = mitotic activity, MVP, necrosis → \"이 기준이 최적이 아니라는 데 광범위한 합의\"",
+  "임상적 의미가 커진 이유: **저위험 환자는 가이드라인상 watchful waiting 또는 IDH inhibitor** 대상 → grade 2 vs 3 구분이 치료에 직결",
+  "단, 치료 결정은 grade만이 아니라 **임상·신경영상 소견**에 크게 좌우 → 다학제 결정 필요",
+  "구성: 신경병리, 분자생물, 신경종양 전문가. 문헌 검토 후 **6회 teleconference**, Steering Committee·Clinical Advisory Panel·ISN Executive 검토",
+  "2022년 cIMPACT-NOW steering committee 활동 재개 → **WHO CNS6**를 위한 새 update 시리즈의 하나",
 ]));
-C.push(SRC("Brat 2026 (abstract, author list)"));
+C.push(SRC("Brat 2026, Neuro-Oncol 28:2069, p.2069–2070"));
 
-C.push(H2("5-2. Grading 알고리즘 (Park YW, KJR 2026, Fig. 2)"));
-C.push(...T(["Tumor", "Grade", "기준"], [
-  ["Astrocytoma, IDH-mut", "**4**", "MVP, necrosis, **CDKN2A/B HD** 그리고/또는 **PDGFRA amp** (하나라도 있으면)"],
-  ["Astrocytoma, IDH-mut", "**3**", "Grade 4 기준 없음 + **mitotic activity ≥3 / 2.4 mm²**"],
-  ["", "(3 시사)", "CDK4/CDK6/CCND2 amp, CDKN2A mutation, RB1 HD or mutation · PIK3CA/PIK3R1 mutation · EGFR alteration, MYCN amp · methylation **A_IDH_HG** 또는 **G-CIMP-low** (Fig.에는 IDH_A_HG로 표기)"],
-  ["Astrocytoma, IDH-mut", "**2**", "Grade 4 기준 없음 + mitosis <3 / 2.4 mm² (+ grade 3 시사 분자 변화 없음)"],
-  ["Oligodendroglioma", "**3**", "MVP, necrosis 그리고/또는 **mitotic activity ≥6 / 2.4 mm²**"],
-  ["Oligodendroglioma", "**2**", "위 기준 없음"],
-], [2.2, 1.0, 6.0], { highlight: (r) => r[1] === "**4**" }));
+C.push(H2("5-2. Biomarker 채택 기준과 grade별 생존 기준치"));
 C.push(...B([
-  "Fig. 2는 grade 3 분자 변화를 \"that **may** suggest WHO grade 3\"로 표현 → 제안 수준 [원문 확인 권장: 정확한 적용 문구]",
-  "Methylation(G-CIMP-low, A_IDH_HG): \"다른 grading 기준에 따라 **grade 3 또는 4**와 부합\"",
-  "Mitosis 기준: \"**could be considered**\"",
-  "Tralongo 2026 해석: Update 12의 권고는 **해석 지침**이며 모든 사건을 독립적인 WHO 기준으로 만드는 것은 아님. PDGFRA amp은 'grade 4-like', RB/PI3K/receptor 변화는 'intermediate risk'",
+  "**Grading biomarker 자격**: OS와의 연관이 **≥2개 독립 연구**에서 입증",
+  "  보조 근거: 종양 grade가 높을수록 빈도 증가, 임상적 진행 시 빈도 증가",
+  "  대규모 코호트, 충분한 추적, 통계적 유의성이 있는 OS 자료가 있는 연구에 집중",
+  "검토한 분자 변화: CDKN2A/B hemizygous deletion·HD·mutation, CDK4/CDK6 amp, RB1 HD·mutation, CCND2 amp, PIK3CA/PIK3R1 mutation, **PDGFRA amp**, MYCN/MYC amp, EGFR alteration, NOTCH1 mutation, TERTp mutation, TP53 mutation, DNA methylation signature, genomic instability(CNV, TMB)",
+  "Biomarker 결과를 IDH-mut glioma 임상 코호트의 OS와 비교해 grade를 매김",
 ]));
-C.push(SRC("Brat 2026 (abstract); Park YW, KJR 2026 Fig. 2; Tralongo 2026 (PMC13498940)"));
-
-C.push(H2("5-3. Grade 4: PDGFRA amplification"));
+C.push(...T(["Tumor", "Grade", "Median OS 기준", "문헌상 median OS 범위"], [
+  ["Astrocytoma, IDH-mut", "**4**", "**< 6년**", "4.1–5.9년"],
+  ["Astrocytoma, IDH-mut", "3", "< 10년", "7.0–12.5년"],
+  ["Astrocytoma, IDH-mut", "2", "≥ 10년", "11.4–11.8년"],
+  ["Oligodendroglioma", "3", "< 14년", "9.8–14.2년"],
+  ["Oligodendroglioma", "2", "≥ 14년", "15.6년–미도달"],
+], [2.6, 1.0, 2.4, 3.2], { highlight: (r) => r[1] === "**4**" }));
 C.push(...B([
-  "초록 원문: \"PDGFRA amplification was associated with **highly aggressive clinical behavior** of IDH-mutant astrocytomas, **consistent with CNS WHO grade 4**.\"",
-  "→ MVP, necrosis, CDKN2A/B HD와 **같은 grade 4 기준**으로 알고리즘에 배치",
-  "조직학적 grade(2 또는 3)와 무관하게 적용",
-  "Update 5(2020)에서 \"추가 근거가 쌓이면 grading 기준이 될 수 있다\"고 보류했던 marker를 6년 뒤 채택",
+  "Grade 4 marker 후보는 **CDKN2A/B HD의 생존 결과와도 비교**",
+  "저자들이 인정한 한계: 대부분 임상 보고가 **장기간·이질적으로 치료된** 환자, 표준치료 변화로 생존 개선, 전향적 대규모 series는 일부만 WHO 2016/2021로 분류, 후향 series는 추적 부족 + **수술 전후 종양 부피**와 치료 패턴 차이로 교란",
 ]));
-C.push(SRC("Brat 2026 (abstract); Update 5 (PMC8443062)"));
+C.push(SRC("Brat 2026, p.2070"));
 
-C.push(H2("5-4. Grade 3: mitosis 기준과 분자 marker"));
+C.push(H2("5-3. 공식 Grading 정의 (Table 1)"));
+C.push(...T(["Grade", "Table 1 원문 정의 (요약 번역)"], [
+  ["2", "IDH1/2 mutation이 있는 diffusely infiltrative astrocytic glioma로, mitotic activity가 없거나 낮음(**<3 mitoses / 2.4 mm²**). MVP, necrosis, **grade 3 또는 4와 연관된 분자 기준 모두 없음**"],
+  ["3", "Significant mitotic activity(**≥3 mitoses / 2.4 mm²**) **또는 grade 3에 부합하는 분자 변화**, 또는 그 조합. MVP, necrosis, grade 4 분자 기준 없음"],
+  ["**4**", "**MVP 또는 necrosis 또는 CDKN2A/B HD 또는 PDGFRA amplification**, 또는 그 조합"],
+], [0.9, 8.3], { highlight: (r) => r[0] === "**4**" }));
 C.push(...B([
-  "**Mitotic count ≥3 / 2.4 mm²** 제안",
-  "  2.4 mm²는 고배율 시야 약 10개에 해당하는 면적 [보충 — 현미경 시야 직경에 따라 다름]",
-  "  이전: 검증된 cut-off 없음, 관행상 전체 검체 ≥2 mitoses",
-  "  PDGFRA IHC 논문: \"grade 2/3 cut-off가 낮다(2.4 mm²당 3개)\" + 생검이 **조영증강 밖**에서 얻어지거나 세포 밀도가 낮으면 grading이 어려움",
-  "중간 위험(grade 3에 가장 부합) 분자 변화 — **PI3K**(PIK3CA·PIK3R1 mut), **EGFR** alteration, **MYCN** amp, **RB pathway**(CDK4·CDK6·CCND2 amp, RB1 HD/mut, CDKN2A **mutation**)",
-  "CDKN2A: **HD = grade 4**, **point mutation = grade 3 시사** — 혼동 주의",
-  "Methylation G-CIMP-low / A_IDH_HG: 다른 기준에 따라 grade 3 또는 4",
+  "**중요(이전 노트 수정)**: grade 3 분자 변화는 '고려'가 아니라 **Table 1에서 grade 3 정의의 일부** → 형태학적 grade 2라도 Table 2 변화가 있으면 grade 3",
+  "2.4 mm² = **고배율 시야(HPF) 0.24 mm² × 10개**",
 ]));
-C.push(SRC("Brat 2026 (abstract); Tauziède-Espariat, Brain Pathol 2026 (PMC13535536); Update 5"));
+C.push(SRC("Brat 2026, Table 1 (p.2078), Grading Considerations (p.2077)"));
 
-C.push(H2("5-5. Oligodendroglioma"));
+C.push(H2("5-4. Table 2 — 고등급을 시사하는 분자 변화"));
+C.push(...T(["분자 변화", "Grade", "원문 결론 요지"], [
+  ["CDK4 amplification", "3", "RB pathway — grade 2와 부합하지 않음. 일부 연구는 grade 4 시사했으나 일관성 부족"],
+  ["CDK6 amplification", "3", "RB pathway"],
+  ["CCND2 amplification", "3", "RB pathway (일부 연구 HR 8.6)"],
+  ["RB1 HD 또는 mutation", "3", "RB pathway"],
+  ["CDKN2A **mutation**", "3", "401명 중 mutation 15명 — HD(47명)와 비슷한 결과. 반대 allele LOH 유무와 무관"],
+  ["PIK3CA 또는 PIK3R1 mutation", "3", "결과 혼재. CATNON 장기 추적에서는 연관 소실. TMZ 후 hypermutation에서 획득될 수 있음. '대세 근거상 grade 3'"],
+  ["EGFR alteration (amp 또는 mutation)", "3", "드묾(grade 2 0/250, grade 3 1.1%, grade 4 4.5%), 예후 불량"],
+  ["MYCN amplification", "3", "드물고 고등급에 많음, 예후 불량"],
+  ["Methylation G-CIMP-low 또는 A_IDH_HG", "3 (또는 4)", "최소 grade 3. Grade 4 여부는 다른 grade 4 소견 유무로 결정. Classifier score **>0.90**만 grading의 확정 근거"],
+  ["**PDGFRA amplification**", "**4**", "CATNON에서 CDKN2A/B HD와 독립적인 다변량 효과"],
+  ["**CDKN2A/B homozygous deletion**", "**4**", "CNS5 기준 유지"],
+], [3.0, 1.0, 5.2], { highlight: (r) => r[1] === "**4**" }));
+C.push(SRC("Brat 2026, Table 2 (p.2079) 및 각 절 Summary"));
+
+C.push(H2("5-5. PDGFRA amplification — 원문 근거 전체"));
 C.push(...B([
-  "Grading을 개선할 새 feature를 **찾지 못함**",
-  "단, mitosis가 높아 grade 3이지만 **necrosis, MVP, CDKN2A/B HD, MRI 조영증강이 없는** 종양은 생존이 길 수 있음",
-  "  → 이 문장은 oligodendroglioma grade 3에서 CDKN2A/B HD와 조영증강을 **위험 인자로 함께 고려**한다는 의미로 읽힘",
-  "  → 영상의학적 의미: **조영증강 유무가 예후 정보**로 언급된 드문 사례",
-  "Fig. 2 기준: MVP, necrosis 그리고/또는 mitosis ≥6 / 2.4 mm² → grade 3",
-  "Tralongo 2026: Update 12는 oligodendroglioma grading을 더 정교하게 할 만큼 검증된 genomic·epigenomic 기준을 찾지 못함, 근거는 astrocytoma에서 가장 강하며 oligodendroglioma로 그대로 옮기면 안 됨",
+  "**빈도**: grade 2·3 IDH-mut astrocytoma의 **4–6%**, grade 4의 **8–15%** → grade가 높을수록 빈도 증가(채택 기준 충족)",
+  "다른 예후 불량 marker와 **겹침이 적음** → 독립적 영향 시사",
+  "원문이 인용한 연구",
 ]));
-C.push(SRC("Brat 2026 (abstract); Tralongo 2026 (PMC13498940)"));
+C.push(...T(["연구", "대상", "결과"], [
+  ["**CATNON** (van den Bent, Lancet Oncol 2026)", "Grade 3 IDH-mut astrocytoma, n=440 (CDKN2A/B HD 포함)", "**OS 3.1년 vs 9.3년**, HR **3.51** (2.21–5.58), P<.0001, **다변량**, **CDKN2A/B HD와 독립**"],
+  ["Yang RR (Brain Pathol 2020)", "Grade 2/3, n=155", "PDGFRA amp 18.8%, mean OS 40.5개월, 최고위험군, 다변량 HR **2.90** (1.37–6.15), P=.005"],
+  ["Richardson & Walker (J Neuropathol Exp Neurol 2020)", "TCGA·cBioPortal 저등급, n=379", "PFS·OS 단축, mean survival 77개월 (P=.0033, 단변량)"],
+  ["Shirahata (Acta Neuropathol 2018)", "전 grade, n=211", "생존 단축 (P=.03, 단변량)"],
+  ["Ghosh (Neuro-Oncol 2025)", "전 grade, n=998", "다변량 HR **1.9** (1.1–3.4). Grade 2/3에서는 다른 focal amp와 묶어 **intermediate risk** (CDKN2A/B HD 없을 때)"],
+  ["Virata (Neuro-Oncol 2026)", "GENIE 840 + cBioPortal 367", "Grade 2/3에서 단변량 HR **4.5** (1.5–13.2), **다변량에서는 유의하지 않음**"],
+], [2.6, 2.6, 4.0]));
+C.push(...B([
+  "**원문 Summary**: \"대부분의 연구는 PDGFRA amp이 grade 2 또는 3 임상 경과와 **맞지 않음**을 보여줌 → IDH-mut astrocytoma에서 **grade 4 기준으로 고려해야 함**\"",
+  "**Conclusions**: 예후 불량 변화는 독립 효과인지 CDKN2A/B HD 등과 함께 있는지 따져야 함 → PDGFRA amp은 **여러 연구의 다변량 분석에서 독립 효과** 입증. CATNON(CDKN2A/B HD 포함 코호트)에서 median 3.1년 = grade 4 행동, CDKN2A/B HD와 독립",
+  "→ 이전 노트의 'Richardson 2026 validation(51.4 vs 126.2개월)'은 **Update 12 발표 이후** 나온 독립 검증 letter로, Update 12의 근거는 아님",
+]));
+C.push(SRC("Brat 2026, PDGFRA Amplification (p.2071), Conclusions (p.2083); 인용 24, 26, 29, 34–39"));
 
-C.push(H2("5-6. Update 5 → Update 12 비교"));
+C.push(H2("5-6. RB pathway — 왜 PDGFRA는 4이고 CDK4는 3인가"));
+C.push(...B([
+  "RB pathway 구성: p16INK4a(CDKN2A), p15INK4b(CDKN2B), CDK4, CDK6, Cyclin D2(CCND2), Rb(RB1)",
+  "근거 요약",
+  "  Shirahata: RB1 HD + CDK4 amp + CDK6 amp를 묶으면 CDKN2A/B HD와 비슷(n=211), 개별로는 RB1 HD만 유의",
+  "  Aoki: RB pathway 변화(CDKN2A/B HD, RB1 HD/mutation, CDK4 amp) 묶음 → grade 4 행동(HR 7.1, 20.5), **개별로는 비유의**",
+  "  Richardson & Walker: 개별로는 CDKN2A/B HD와 CDK4 amp만 다변량 유의",
+  "  Virata: CDK4 amp 다변량 HR 1.91 / Cimino: CDK4 amp 또는 CDKN2A/B HD 단독 = intermediate(median 63개월), chromosome 14 loss 동반 시 23개월",
+  "  Yang: CDKN2A/B HD 또는 CDK4 amp → intermediate(HR 2.43)",
+  "**원문 결론**: 일부 연구가 CDK4·CCND2 amp의 grade 4 행동을 시사했지만 **CDKN2A/B HD만큼 일관되고 강하지 않음** → **grade 3 기준**",
+  "왜 CDKN2A/B HD가 더 강한가(원문 가설): ① p16INK4a + p15INK4b 동시 소실 ② CDKN2A가 **p16INK4a와 p14ARF** 둘 다 encode → RB + p53 경로 동시 타격",
+  "**CDKN2A/B hemizygous deletion**: 2개 연구는 생존 단축, 2개는 무관 → 방법·threshold 차이 → **grading 기준으로 쓰지 않음**",
+  "CDKN2A/B·CDKN2C promoter methylation의 예후 의미는 불명확",
+]));
+C.push(SRC("Brat 2026, Retinoblastoma Pathway Alterations (p.2071–2072), Conclusions (p.2083)"));
+
+C.push(H2("5-7. Grading에 쓰지 않기로 한 것들"));
+C.push(...T(["후보", "결론", "이유"], [
+  ["MYC amplification", "근거 불충분", "결과 상반, 8q gain vs focal amp 정의 불일치"],
+  ["NOTCH1 alteration", "근거 불충분", "4–5%로 드묾, 생존 연관 없음, 재발 시 hypermutation과 연관 가능"],
+  ["CNV load (genomic instability)", "기준 제시 불가", "고등급·생존 단축과 일관된 연관이나 측정법·threshold 제각각 → **high CNV는 grade 2와 맞지 않음**, 조직 grade 2 + high CNV면 **methylation 검사 권장**"],
+  ["TMB", "근거 불충분", "IDH-mut AST 평균 0.5–2.5 mut/Mb. **7–10 mut/Mb**면 **MMR 이상 평가** 필요"],
+  ["Ki-67", "기준 권고 안 함", "Grade 2 보통 <4%, 3은 4–10%, 4는 >10%이나 겹침. 5% threshold는 단변량에서만 의미"],
+  ["CDKN2A/B hemizygous deletion", "기준 아님", "연구 결과 상반"],
+  ["G-CIMP-high / A_IDH", "grade 2 보장 아님", "\"G-CIMP-high나 A_IDH가 항상 grade 2 행동을 뜻하지는 않음\""],
+], [2.6, 1.6, 5.0]));
+C.push(SRC("Brat 2026, p.2073–2076"));
+
+C.push(H2("5-8. Mitosis 기준 (≥3 / 2.4 mm²)의 근거"));
+C.push(...B([
+  "CNS5: 문헌 근거 부족으로 **수치 기준 미제시**. Pre-IDH 시대 관행: 전체 검체에서 **0–1 vs ≥2**(작은 생검은 1개)",
+  "WHO CNS5 방침: mitotic count는 **HPF 개수가 아닌 면적(mm²)** 기준으로 — 현미경마다 HPF 크기가 달라서, 디지털 병리에서도 필요",
+  "Update 8(meningioma) 인용: H&E 3–5 μm, ×400, **hotspot**에서 연속 HPF 계수. 현재 대물렌즈 HPF는 대개 0.23–0.24 mm² → **0.16 mm² HPF 10개 ≈ 0.23–0.24 mm² HPF 7개**",
+  "**근거 연구 1 — Kros 2018** (Acta Neuropathol Commun)",
+  "  CATNON(EORTC 26053) + EORTC 22033-26033, IDH-mut astrocytoma **455명**, consensus panel review",
+  "  최적 threshold **≥3 mitoses / 2.4 mm²** → PFS 유의(P<.001, 다변량 HR 1.62 [1.02–2.56], P=.04), **OS는 비유의**(P=.7, 자료 미성숙)",
+  "  한계: 디지털 slide, 7명 중 4명 판독자 결과만 사용, 일치도 **60%**. 디지털 판독은 mitosis를 과소평가할 수 있음",
+  "**근거 연구 2 — Tran 2023** (Neuropathol Appl Neurobiol)",
+  "  Grade 2/3 IDH-mut astrocytoma **100명**, Update 8 방식(linear 또는 serpentine 연속 HPF)",
+  "  고위험: ≥6 / 3 mm²(≥4.8 / 2.4 mm²), 중간위험: ≥3 / 3 mm²(≥2.4 / 2.4 mm²) (P=.0098), kappa 0.76",
+  "  한계: 후향, 단일 기관, 100명, 수술 후 치료 다양",
+  "**원문 결론**: 기준은 **낮음(mm²당 1–2개)**. ≥3 / 2.4 mm²은 **grade 2 지정의 신중한 재평가를 촉구**하고 grade 2/3 구분 threshold로 **쓸 수 있음**. **WHO 기준으로 완전히 승인하려면 추가 연구 필요**",
+  "참고 생존(Shirahata/von Deimling): grade 4 median OS 3–4년, grade 2 11.4–11.8년, grade 3 7.9–9.7년 / German Glioma Network 258명: grade 2 미도달(추적 10.4년), grade 3 8.1년, grade 4 4.7년",
+]));
+C.push(SRC("Brat 2026, Mitotic Activity and Proliferation Indices (p.2075–2076); 인용 83(Kros 2018), 85(Tran 2023)"));
+
+C.push(H2("5-9. DNA methylation"));
+C.push(...B([
+  "TCGA: G-CIMP-low 9/9 모두 grade 3(G-CIMP-high는 46%). Grade 4에서 G-CIMP-low 32–40%",
+  "G-CIMP-low에 CDKN2A/B HD가 더 많은 경향(41–65% vs 25–26%), G-CIMP-high → low로 진행 가능",
+  "**CATNON**: G-CIMP-low 다변량 HR **4.12** (n=428) / A_IDH_HG 다변량 유의(n=412)",
+  "A_IDH_HG 비율: grade 2 0–8%, grade 3 6–48%, grade 4 74–79%",
+  "German Glioma Network(258명): LINE1 methylation 감소(A_IDH_HG 대리) → grade 4·짧은 생존, 이 중 CDKN2A HD 동반 시 더 나쁨",
+  "A_IDH와 A_IDH_HG의 정의는 **고정된 것이 아니며** 새 자료로 바뀔 수 있음",
+  "**결론**: G-CIMP-low·A_IDH_HG는 **최소 grade 3**, grade 4는 다른 grade 4 소견 유무로. **Classifier score >0.90만 grading의 확정 근거**, 미만은 다른 소견과 함께 해석",
+]));
+C.push(SRC("Brat 2026, DNA Methylation Signature (p.2073–2074)"));
+
+C.push(H2("5-10. 새 IDH-mutant astrocytoma subgroup"));
+C.push(...T(["Subgroup", "특징", "원문 제안"], [
+  ["**Infratentorial** IDH-mut astrocytoma", "42명(grade 2/3/4 = 12/18/12). **80%가 non-R132H**(IDH1 R132C/G/S, IDH2 R172S/G), ATRX loss <50%, MGMT methylation 60%, methylation profile 다름, **생존이 더 나쁨**", "Grading에 반영할 근거는 없음, **별도 subtype** 고려 가능. 절제 가능성 차이 때문일 수도"],
+  ["**Primitive neuronal component**", "작은 원형 세포, GFAP 음성, synaptophysin·TTF1 양성(소세포 신경내분비암 전이와 혼동 주의, cytokeratin 음성). TP53·ATRX + RB1·MYCN 이상, G-CIMP-low/A_IDH_HG, **측두엽 호발**, grade 4와 비슷한 생존, **연수막·축외 전파 위험 증가**", "Grade 4에 부합, 별도 subtype 고려"],
+  ["**Primary MMR-deficient**", "Lynch / constitutional MMR deficiency, 소아·청소년·젊은 성인. Hypermutation, MGMT unmethylated >60%, **TMZ 반응 불량**, median 생존 **15개월**", "**<25세 고등급 IDH-mut astrocytoma는 MMR 검사**, MMR-deficient glioma는 IDH 검사. 유전 상담 필요"],
+], [2.2, 4.6, 2.4]));
+C.push(...B([
+  "영상의학 연결 [제안]: **후두와 IDH-mut glioma**는 R132H IHC 음성일 수 있음 → sequencing 필요. Primitive neuronal component는 **척수·연수막 전파** 확인 영상이 의미 있음",
+]));
+C.push(SRC("Brat 2026, Subgroups of IDH-Mutant Astrocytomas (p.2076–2077)"));
+
+C.push(H2("5-11. Oligodendroglioma (원문 상세)"));
+C.push(...B([
+  "**결론: grading 기준을 바꿀 근거 불충분**",
+  "**CDKN2A/B HD**: grade 3에서 5.5–6.8%, **grade 2에서는 보고된 적 없음**(40예, 109예). POLA cohort(grade 3)에서 PFS·OS 불량 인자, 그러나 **median 생존 >10년으로 grade 4 행동 아님** → grade 4로 올리지 않음. 단 발견되면 **grade 2 지정을 재고**",
+  "CDKN2A/B hemizygous deletion: 15.9%(메타분석 659명), 예후와 무관 → 기준 아님",
+  "NOTCH1(31%), PIK3CA(~20%)/PIK3R1(~9%), TP53: 근거 불충분",
+  "**TERTp-wildtype oligodendroglioma**: 청소년, grade 2, 1p/19q 외 CNV 없음, 5년 PFS 93.7% vs 61.1% → 독립 검증 필요",
+  "**Mitosis**: brisk mitotic activity = **≥2.5 / mm² = ≥6 / 10 HPF(0.24 mm²)**를 실용적 cut-off로 사용 가능",
+  "**POLA cohort(grade 3)**: group 1(mitosis만 높음) 예후 최선, group 2(MVP만), group 3(MVP + necrosis) 최악",
+  "  **Group 1 중 MRI 조영증강이 있으면 예후 불량**(OS P=.028, PFS P=.006)",
+  "  → **mitosis만으로 grade 3이고 조영증강이 없으면 생존이 길 수 있음**",
+  "Ki-67 ≥15%, MCM6 ≥50% → grade 3에서 OS 단축(POLA 220명). ≥2.5 mitoses/mm²는 MRI 성장 속도 증가·PFS 단축과 연관",
+  "**Global DNA hypermethylation 소실**(classifier에서 A_IDH_HG로 분류, Heidelberg v12.8): 생존 불량, CDKN2A/B HD·CDK4 amp 많음. 단 A_IDH(저등급)로 분류된 것은 낮은 종양세포 함량 때문",
+  "**Oligosarcoma**: 대부분 치료 후 재발에서 발생, NF1·TP53, CDKN2A/B HD 빈번, 진단 후 median 생존 **1.3년**",
+]));
+C.push(SRC("Brat 2026, Oligodendroglioma 절 (p.2079–2082)"));
+
+C.push(H2("5-12. 다학제 고려사항 — 영상의학과에 직접 관련"));
+C.push(...B([
+  "Pre-IDH 시대의 예후 인자(**40세 이상**, PS, grade)는 상당 부분 의미를 잃음 → **40세 cut-off는 더 이상 유효하지 않음**",
+  "  분자 분류 + 현대 치료(RT 후 항암)의 효과 때문. 예: CATNON에서 RT 단독 5.1년 vs **RT + adjuvant TMZ >12년**",
+  "**치료로 결과가 좋아졌다고 grade를 낮추면 안 됨** — 치료 없을 때의 본래 행동을 덜 공격적으로 오해하게 됨",
+  "Grade 3 IDH-mut astrocytoma에서 **60세 이상은 예후 불량**",
+  "**수술 전·후 종양 부피와 MRI상 성장 속도**가 **주요 예후 인자** → 최대 안전 절제의 중요성(특히 astrocytoma)",
+  "**MRI 조영증강의 예후 의미는 논쟁 중**(연관 있다는 연구와 없다는 연구 혼재)",
+  "**가장 일관된 임상 예후 인자 = 수술 전·후 종양 크기**",
+  "Early adjuvant treatment 비교 후향 연구들은 모두 고위험 환자(큰 잔존, 고등급)에 조기 치료가 몰리는 bias",
+]));
+C.push(SRC("Brat 2026, Multidisciplinary Considerations (p.2082)"));
+
+C.push(H2("5-13. 분자 검사는 언제 하나 (Figure 1과 결론)"));
+C.push(...B([
+  "Figure 1 알고리즘: IDH1/2 → ATRX(소실 → astrocytoma 경로 / 유지 → 1p/19q 검사, 필요 시 TERTp·methylation) → 조직 분석 → **분자 진단 검사** → 통합 진단",
+  "**분자 검사가 특히 필요한 경우**(원문)",
+  "  조직 소견이 grade 2와 3 사이 경계",
+  "  **신경영상에서 조영증강 또는 비교적 빠른 진행**",
+  "  특이한 임상 양상",
+  "**광범위한 분자 검사 없이도 grade 2를 꽤 높은 확신으로 진단할 수 있는 예**(원문): **천천히 자라는 T2 고신호·비조영 병변** + 생검에서 낮은 세포 밀도, 낮은 mitosis, 낮은 Ki-67, grade 3·4 소견 없음",
+  "→ **영상 소견이 분자 검사 여부를 결정하는 공식 기준으로 명시**됨 — 발표의 핵심 연결고리",
+  "IHC 대리 marker(PDGFRA, EGFR, MYCN, p16, MTAP, Rb, CDK4, CDK6): 가능성은 있으나 **아직 분자 검사를 대체할 단계 아님**",
+  "자원이 제한된 환경에서는 기관 상황에 맞춰 결정",
+]));
+C.push(SRC("Brat 2026, Figure 1 (p.2078), Grading Considerations, Conclusions (p.2083–2084)"));
+
+C.push(H2("5-14. Update 5 → Update 12 비교"));
 C.push(...T(["항목", "Update 5 / WHO CNS5", "Update 12 (2026)"], [
   ["Grade 4 분자 기준", "CDKN2A/B HD", "CDKN2A/B HD + **PDGFRA amp**"],
-  ["Grade 2 vs 3", "\"significant\" mitotic activity (수치 없음)", "**≥3 mitoses / 2.4 mm²** 제안"],
-  ["Grade 3 분자 marker", "없음 (근거 부족으로 보류)", "PI3K, EGFR, MYCN, RB pathway, G-CIMP-low / A_IDH_HG"],
+  ["Grade 2 vs 3", "\"significant\" mitotic activity (수치 없음)", "**≥3 mitoses / 2.4 mm²** (10 HPF × 0.24 mm²)"],
+  ["Grade 3 분자 기준", "없음", "**Table 2**: CDK4/CDK6/CCND2 amp, RB1, CDKN2A mut, PIK3CA/R1, EGFR, MYCN, G-CIMP-low / A_IDH_HG"],
   ["PDGFRA amp", "\"추가 근거 시 grading 기준 가능\"", "**Grade 4 기준**"],
-  ["G-CIMP-low", "\"검증 cohort 필요\"", "Grade 3–4 시사 (단독 grade 4 아님)"],
-  ["Oligodendroglioma", "MVP·necrosis·mitosis·CDKN2A/B HD", "개정 근거 없음, mitosis ≥6 / 2.4 mm²"],
-  ["필요한 검사", "CDKN2A/B 검출(FISH, MLPA, NGS 등)", "**NGS + CNV(methylation array 등)** 사실상 필요"],
-], [2.0, 3.4, 3.8]));
-C.push(SRC("Update 5 (PMC8443062); Brat 2026 (abstract); Tauziède-Espariat, Ann Pathol 2026 (abstract)"));
+  ["CDKN2A/B hemizygous", "—", "기준 아님"],
+  ["Methylation", "G-CIMP-low 검증 필요", "최소 grade 3, classifier score >0.90"],
+  ["Oligodendroglioma", "MVP·necrosis·mitosis", "개정 없음, ≥6 / 10 HPF 실용 cut-off, 비조영 mitosis-only grade 3은 예후 양호 가능"],
+  ["새 subgroup", "—", "Infratentorial, primitive neuronal component, primary MMR-deficient"],
+], [2.0, 3.2, 4.0]));
+C.push(SRC("Update 5 (PMC8443062); Brat 2026"));
 
 // =============== 6. PDGFRA ===============
 C.push(H1("6. PDGFRA amplification 심화"));
@@ -435,16 +574,18 @@ C.push(SRC("Tauziède-Espariat, Brain Pathol 2026 (PMC13535536); Le Rhun, Neuro-
 
 C.push(H2("6-2. 근거 연구 정리"));
 C.push(...T(["연구", "설계·대상", "주요 결과", "약점"], [
-  ["**Yang RR** Brain Pathol 2019", "후향, IDH-mut grade II/III 160명, FISH", "PDGFRA amp **18.8%**, CDKN2A HD 15.0%, CDK4 amp 18.1%, 상호 배타. PDGFRA amp → PFS p=0.0003, OS p<0.0001. Mean OS 40.5 / 62.9 / 71.5개월", "단일 기관, 추적 짧음(저자 인정), mean OS 사용"],
+  ["**CATNON** (van den Bent 2026, Update 12 인용)", "RCT 내 분석, grade 3 IDH-mut AST 440명", "PDGFRA amp **OS 3.1 vs 9.3년, HR 3.51**(2.21–5.58), 다변량, **CDKN2A/B HD와 독립**", "Grade 3 조직만, 사후 분석"],
+  ["**Yang RR** Brain Pathol 2020", "후향, IDH-mut grade II/III 160명(다변량 155명), FISH", "PDGFRA amp **18.8%**, CDKN2A HD 15.0%, CDK4 amp 18.1%, 상호 배타. PDGFRA amp → PFS p=0.0003, OS p<0.0001. Mean OS 40.5 / 62.9 / 71.5개월. 다변량 HR 2.90", "단일 기관, 추적 짧음(저자 인정), mean OS 사용"],
   ["**Tesileanu** Neuro-Oncol 2021 (CATNON)", "RCT 내 분자 분석, IDH-mut anaplastic astrocytoma 432명", "다변량 독립 예후인자: 나이, MMSE, TMZ, classifier, **PDGFRA amp**, CDKN2A/B HD, PI3K mut, CNV load. RPA 첫 분기 = CDKN2A HD", "Grade 3 조직만 포함, 사후 분석"],
   ["**van den Bent** Lancet Oncol 2026 (CATNON final)", "IDH-mut 444명, 추적 10.9년", "PDGFRA·CDK4 amp, CDKN2A HD, CNV load → 예후 불량. **TMZ 효과 predictive 아님**", "탐색적 분석"],
   ["**Virata** Neuro-Oncol 2026", "후향, GENIE 840 + cBioPortal 367명", "PDGFRA alteration 6.5%. Cohort 1 median OS 35.5개월(HR 4.4). **다변량 독립 유의성 미달**, 단독 alteration HR 4.5. 'Intermediate' 군에 배치", "Amp + mut 합산, 치료 변수 없음, 소수"],
-  ["**Richardson** Acta Neuropathol 2026", "후향 validation, 1,140명", "PDGFRA amp으로 2→4 **7례**, 3→4 **15례**. Median OS **51.4 vs 126.2개월**(HR 1.9, p=0.0284)", "Letter, mitosis 직접 확인 불가, methylation 260례만"],
+  ["**Ghosh** Neuro-Oncol 2025 (Update 12 인용)", "전 grade 998명", "다변량 HR 1.9. Grade 2/3에서는 다른 focal amp와 묶어 intermediate", "원문 미확인"],
+  ["**Richardson** Acta Neuropathol 2026 (**Update 12 이후** 검증)", "후향 validation, 1,140명", "PDGFRA amp으로 2→4 **7례**, 3→4 **15례**. Median OS **51.4 vs 126.2개월**(HR 1.9, p=0.0284)", "Letter, mitosis 직접 확인 불가, methylation 260례만"],
   ["**Tauziède-Espariat** Ann Pathol 2026", "실제 진료, 50례", "**24%** grade 변경(2→3 7, 2→4 2, **3→4 3**), CNV 기반 8례", "단일 기관, 생존 자료 없음"],
 ], [1.9, 2.0, 3.6, 1.7]));
-C.push(SRC("Yang 2019 (10.1111/bpa.12801); Tesileanu 2021 (PMC8408862); van den Bent 2026 (10.1016/S1470-2045(25)00614-X); Virata 2026 (PMC13437890); Richardson 2026 (PMC13391642); Tauziède-Espariat 2026 (10.1016/j.annpat.2026.09.001)"));
+C.push(SRC("Brat 2026 p.2071; Yang 2020 (10.1111/bpa.12801); Tesileanu 2021 (PMC8408862); van den Bent 2026 (10.1016/S1470-2045(25)00614-X); Virata 2026 (PMC13437890); Richardson 2026 (PMC13391642); Tauziède-Espariat 2026 (10.1016/j.annpat.2026.09.001)"));
 
-C.push(H2("6-3. Validation (Richardson 2026) 상세"));
+C.push(H2("6-3. 발표 후 독립 검증 (Richardson 2026) 상세"));
 C.push(...B([
   "코호트: AACR GENIE + TCGA + MSKCC, IDH-mut astrocytoma **1,140명**",
   "2016 → 2021 WHO: CDKN2A/B HD로 grade 2의 7.9%(40례), grade 3의 12.2%(45례)가 grade 4로",
@@ -459,7 +600,7 @@ C.push(...B([
 ]));
 C.push(SRC("Richardson 2026 (PMC13391642 전문)"));
 
-C.push(H2("6-4. Virata 2026 상세 — 반론의 핵심 자료"));
+C.push(H2("6-4. Virata 2026 상세 — 반론의 핵심 자료 (Update 12도 인용)"));
 C.push(...B([
   "Cohort 1(GENIE 840) reference(grade 2/3, 변화 없음) median OS **140.7개월**",
   "Univariate median OS(Cohort 1, 유전자명은 순서 대응 [원문 확인 권장]): CDKN2A HD 25.4, CDK4 amp 29.1, CCND2 amp 29.1, **PDGFRA alteration 35.5(HR 4.4)**, PIK3R1 32.7, PIK3CA 48.0, MYCN 30.2, EGFR 29.8, TERTp 59.0, grade 4 histology 35.2개월",
@@ -481,6 +622,8 @@ C.push(...T(["방법", "Amplification 정의 / 특징", "비고"], [
   ["**PDGFRA IHC**", ["Method 1: ≥50% 강양성 → 민감도 **54%**, 특이도 **99%**", "Method 2: **≥10% 강양성** → 민감도 **100%**, 특이도 **89%**"], "**Screening**. Gain(≤6 copies)·mutation에서도 양성 가능 → FISH 등으로 확진. Mutation 검출 불가"],
 ], [1.8, 4.2, 3.2]));
 C.push(...B([
+  "**Update 12 원문에는 PDGFRA amplification의 copy 수 정의가 없음** → 검사법별 기관 기준을 따름",
+  "Update 12의 IHC 언급: PDGFRA·EGFR·MYCN·p16·MTAP·Rb·CDK4·CDK6 IHC는 대리 marker 가능성이 있으나 **분자 검사를 대체할 단계 아님**",
   "IHC 논문 제안 알고리즘: **>10% 강양성 → amplification 강력 의심**, 국소(<10%) 강양성 → FISH 등 필수",
   "IHC 코호트: HGG 114례 중 PDGFRA amp 27례 — pedRTK1A 9/14, **high-grade AST IDH-mut 5/10**, GBM IDH-wt 11/45",
   "Clonal amplification에서는 IHC 양성이 증폭된 부분에만 국한 → **종양 내 이질성**을 시각적으로 보여줌",
@@ -490,10 +633,10 @@ C.push(SRC("Tauziède-Espariat, Brain Pathol 2026;e70142 (PMC13535536 전문); T
 
 C.push(H2("6-6. 쟁점 정리"));
 C.push(...T(["쟁점", "Grade 4 지지", "반대·유보"], [
-  ["Grade 4인가 intermediate인가", "Update 12, Richardson 2026(재분류 군 OS = 원래 grade 4, p=0.1277), Yang 2019(최고위험군)", "Virata 2026(intermediate, 다변량 비유의) — 단, 단독 alteration은 CDKN2A HD 단독과 OS 차이 없음"],
-  ["독립 예후인자인가", "CATNON 다변량 독립 인자(grade 3 조직 432명)", "Virata 다변량 비유의(amp+mut 합산, 공동 변이 많음)"],
+  ["Grade 4인가 intermediate인가", "Update 12(CATNON 3.1년 = grade 4 기준치 <6년), Richardson 2026(재분류 군 OS = 원래 grade 4, p=0.1277), Yang 2020(최고위험군)", "Virata 2026(intermediate, 다변량 비유의) — 단, 단독 alteration은 CDKN2A HD 단독과 OS 차이 없음"],
+  ["독립 예후인자인가", "CATNON 다변량 HR 3.51, **CDKN2A/B HD와 독립**; Yang HR 2.90; Ghosh HR 1.9", "Virata 다변량 비유의(amp+mut 합산, 공동 변이 많음)"],
   ["예측(predictive) marker인가", "—", "CATNON final: TMZ 효과 예측 못함"],
-  ["Clonal amp도 grade 4인가", "—", "**기준 없음**(필자가 찾은 문헌 범위). FISH ≥10% 정의가 실무 기준"],
+  ["Clonal amp도 grade 4인가", "—", "**Update 12에도 정의 없음**. FISH ≥10% 정의가 실무 기준"],
   ["WHO 공식 기준인가", "—", "**아님**. cIMPACT-NOW 권고, CNS6에서 결정"],
 ], [2.2, 3.6, 3.4]));
 
@@ -581,6 +724,9 @@ C.push(...BOX("[제안] IDH-mutant (추정) astrocytoma 판독 시", [
   "Perfusion(DSC/DCE/ASL): rCBV 최고 부위 위치·값",
   "Midline crossing, ependymal extension",
   "고령이면 molecular GBM 감별 언급",
+  "**Update 12 기준**: 조영증강 또는 빠른 진행 → 보고서에 분자 검사 필요성 명시 / 천천히 자라는 T2 고신호 비조영 병변 → grade 2 가능성 지지",
+  "수술 전 종양 부피와 수술 후 잔존 부피를 정량 기술 (Update 12: 가장 일관된 예후 인자)",
+  "후두와 IDH-mut glioma는 non-R132H 많음 → IHC 음성이어도 IDH sequencing 필요성 언급",
   "**조직 grade와 영상 불일치** 시 보고서·MDT에서 **CNV(PDGFRA, CDKN2A/B)와 NGS 확인 요청**",
   "Biopsy/절제 계획 시 aggressive focus 위치를 명시(spatially annotated sampling)",
   "추적: INDIGO 대상(grade 2, 비조영 잔존)인지, 조영증강 새로 생겼는지 구분",
@@ -627,6 +773,8 @@ C.push(...T(["Tumor", "ASCO-SNO 2022 권고 (초록)"], [
 C.push(...B([
   "**즉, IDH-mut grade 4의 치료는 무작위 근거가 따로 없고**, 가이드라인이 두 선택지를 모두 허용 → CCRT(GBM-type)는 허용된 선택지 중 하나",
   "EANO 2021 가이드라인도 존재(초록만 확인, 세부 권고는 [원문 확인 권장])",
+  "ASCO-SNO 2025 rapid recommendation update(Blakeley, JCO 2025;43:2129)가 있음 — Update 12가 vorasidenib 맥락에서 인용, 세부 내용은 미확인 [원문 확인 권장]",
+  "Update 12: 가이드라인상 **저위험 환자는 watchful waiting 또는 IDH inhibitor** → grade 2 vs 3 구분이 치료에 직결",
   "Vorasidenib 시대의 grade 2 관리: 최대 안전 절제 → 저위험은 관찰, 잔존 비조영 안정 병변은 vorasidenib, 고위험은 RT + 항암 [보충]",
 ]));
 C.push(SRC("Mohile NA, J Clin Oncol 2022;40:403 (10.1200/JCO.21.02036, abstract); Weller M, Nat Rev Clin Oncol 2021;18:170 (abstract); Wu, Curr Treat Options Oncol 2026 (abstract)"));
@@ -685,30 +833,37 @@ C.push(...QA(4, "Update 11의 PDGFRA와 Update 12의 PDGFRA는 같은 의미인�
 
 C.push(H2("11-B. Update 12의 근거와 방법론"));
 C.push(...QA(5, "PDGFRA amp → grade 4의 근거는 결국 후향적 연구 아닌가?",
-  "맞다. 무작위 시험에서 grade 기준을 검증한 연구는 없다. 다만 여러 독립 코호트와 무작위 시험(CATNON)의 분자 분석에서 일관되게 나쁜 예후와 연관됐고, 대규모 validation도 있다.",
-  ["Yang 2019(160명), CATNON 432명 다변량 독립 인자, Tesileanu 2022 systematic review에서 여러 연구 재현", "Richardson 2026(1,140명): 51.4 vs 126.2개월, HR 1.9", "Update 5(2020)는 근거 부족으로 보류했다가 2026년 채택 — 근거 축적 후 결정"],
-  "대부분 후향적, 치료 이질성, 추적 기간이 IDH-mut 생존(>10년)에 비해 짧은 문제는 Update 5도 지적했다."));
-C.push(...QA(6, "Virata 2026은 PDGFRA를 intermediate로 봤는데, 왜 grade 4인가?",
-  "연구마다 결론이 다르다는 것을 인정한다. 다만 Virata에서도 PDGFRA alteration 단독은 HR 4.5였고, 단독 marker와 CDKN2A HD 단독 사이 OS 차이는 없었다. Update 12와 Richardson validation은 grade 4를 지지한다.",
-  ["Virata: 다변량 비유의, 단독 alteration HR 4.5, 2-tier 가능성 언급", "Richardson: PDGFRA amp grade 4와 원래 grade 4 OS 차이 없음(p=0.1277)", "Virata는 amplification과 mutation을 합친 'alteration'으로 분석"],
-  "PDGFRA alteration 환자 수가 적고(6.5%), 다른 변이와 함께 있는 경우가 많아 독립 효과를 가리기 어렵다."));
-C.push(...QA(7, "51.4개월이면 grade 4치고 너무 길지 않나? IDH-wt GBM은 훨씬 짧은데.",
-  "IDH-mut grade 4는 IDH-wt GBM보다 원래 예후가 좋다. 비교 대상은 IDH-wt GBM이 아니라 IDH-mut grade 4이고, 이 군과 차이가 없었다.",
-  ["Richardson: Update 12 기준 grade 4 전체 median OS 37.7개월, PDGFRA amp 재분류 군과 원래 grade 4 차이 없음", "Virata: grade 4 35.3–45.0개월", "Wong 2021: IDH-mut primary GBM 39.4개월"],
-  "51.4개월은 grade 4 전체(37.7)보다 숫자상 길다. 표본이 22례로 작아 신뢰구간이 넓을 것이다 [원문 확인 권장]."));
+  "Grade 기준을 무작위로 검증한 연구는 없다. 그러나 핵심 근거는 무작위 3상 CATNON의 분자 분석으로, grade 3 환자 440명에서 PDGFRA amp이 있으면 OS 3.1년 vs 9.3년(HR 3.51, 다변량)이었고 CDKN2A/B HD와 독립적이었다.",
+  ["Update 12의 biomarker 채택 기준: OS 연관이 ≥2개 독립 연구 + grade·진행에 따라 빈도 증가", "PDGFRA amp: grade 2·3 4–6% → grade 4 8–15%", "독립 연구: CATNON(HR 3.51), Yang 2020(HR 2.90), Ghosh 2025(HR 1.9), Shirahata 2018, Richardson & Walker 2020", "Update 5(2020)는 근거 부족으로 보류 → 근거가 쌓인 2026년에 채택"],
+  "CATNON도 사후(exploratory) 분석이다. 저자들 스스로 이질적 치료, 표준치료 변화, 추적 부족, 종양 부피 교란을 한계로 적었다."));
+C.push(...QA(6, "Virata 2026은 다변량에서 PDGFRA가 유의하지 않았다는데?",
+  "Update 12 원문도 그 결과(단변량 HR 4.5, 다변량 비유의)를 인용하고 있다. 그럼에도 grade 4로 판단한 이유는 CDKN2A/B HD가 포함된 CATNON에서 독립 효과가 다변량으로 확인됐고, 3.1년이라는 생존이 grade 4 기준치(<6년)에 해당하기 때문이다.",
+  ["Update 12 원문 Summary: '대부분의 연구'가 grade 2/3 경과와 맞지 않음을 보임", "Virata는 amplification + mutation을 합친 'alteration'으로 분석, PDGFRA는 6.5%로 소수", "Virata에서도 단독 PDGFRA alteration은 HR 4.5", "발표 후 독립 검증(Richardson 2026): 재분류 grade 4와 원래 grade 4 OS 차이 없음"],
+  "모든 연구가 일치하는 것은 아니다. 원문 표현도 'majority of studies'다."));
+C.push(...QA(7, "Grade 4면 생존이 얼마여야 하나? 기준이 있나?",
+  "Update 12는 문헌 검토로 기준치를 정했다. IDH-mut astrocytoma grade 4 = median OS <6년(문헌 4.1–5.9년), grade 3 <10년(7.0–12.5년), grade 2 ≥10년(11.4–11.8년). CATNON의 PDGFRA amp 3.1년은 grade 4 범위다.",
+  ["Brat 2026 p.2070", "발표 후 검증(Richardson 2026): PDGFRA amp 재분류 51.4개월 ≈ 4.3년, Update 12 기준 grade 4 전체 37.7개월", "IDH-wt GBM과 비교하면 안 됨 — IDH-mut grade 4는 원래 예후가 더 좋음"],
+  "기준치 자체가 이질적으로 치료된 과거 코호트에서 나왔다. 치료가 좋아진 지금 생존이 길어졌다고 grade를 낮추면 안 된다는 것이 원문 입장."));
 C.push(...QA(8, "Mitosis 3개 / 2.4 mm²의 근거는? 왜 2.4 mm²인가?",
-  "Update 12 초록은 '고려할 수 있다(could be considered)'는 제안 수준이다. 세부 근거 연구는 원문 Table에서 확인해야 한다.",
-  ["Update 5: 검증된 cut-off가 없어 'significant' mitotic activity 유지, 관행상 전체 검체 ≥2", "IHC 논문: cut-off가 낮아 생검에서 grading이 어렵다고 지적"],
-  "2.4 mm²의 선택 근거와 근거 연구는 직접 확인하지 못했다 [원문 확인 권장]."));
+  "2.4 mm²는 0.24 mm² HPF 10개다. WHO CNS5가 HPF 대신 면적 기준을 요구해서다. 근거는 2개 연구: Kros 2018(CATNON + EORTC 22033, 455명, PFS만 유의 HR 1.62)과 Tran 2023(100명, ≥2.4–3 / 2.4 mm²가 중간 위험).",
+  ["Brat 2026 p.2075–2076", "WHO CNS5: HPF 크기가 현미경마다 달라 mm² 기준", "Update 8 방식: hotspot에서 연속 HPF 계수"],
+  "Kros는 OS 비유의(자료 미성숙), 디지털 slide, 판독자 일치도 60%. Tran은 단일 기관 100명. 원문도 'WHO 기준으로 완전히 승인하려면 추가 연구 필요'라고 명시. 이 증례의 grade 4 판정은 mitosis가 아니라 PDGFRA amp에 근거하므로 이 한계와 무관."));
 C.push(...QA(9, "Methylation A_IDH_HG만 나오면 grade 4로 해도 되나?",
-  "안 된다. Grade 3 또는 4를 시사하는 adverse feature로 기술하고, 확립된 grade 4 기준(MVP, necrosis, CDKN2A/B HD, PDGFRA amp)이 있을 때만 grade 4.",
-  ["Update 12 abstract: 'grade 3 or 4, depending upon other grading criteria'", "Tralongo 2026: A_IDH_HG·G-CIMP-low는 독립 grade 4 기준 아님, 두 용어는 서로 바꿔 쓰면 안 됨"], null));
+  "안 된다. Update 12는 G-CIMP-low·A_IDH_HG를 '최소 grade 3'으로 보고, grade 4는 다른 grade 4 소견(MVP, necrosis, CDKN2A/B HD, PDGFRA amp)이 있을 때만이다. 또 classifier score >0.90일 때만 grading의 확정 근거로 쓴다.",
+  ["Brat 2026 DNA methylation Summary(p.2074)", "Tralongo 2026: 두 용어는 서로 바꿔 쓰면 안 됨"], "A_IDH와 A_IDH_HG의 정의 자체가 새 자료로 바뀔 수 있다(원문)."));
 
+C.push(...QA(25, "왜 CDK4 amp는 grade 3이고 PDGFRA amp는 grade 4인가? 둘 다 증폭인데.",
+  "근거의 일관성 차이다. CDK4·CCND2 amp도 일부 연구에서 grade 4 수준이었지만 Update 12는 'CDKN2A/B HD만큼 일관되고 강하지 않다'고 판단했다. PDGFRA amp은 CDKN2A/B HD를 포함한 CATNON에서 다변량 독립 효과가 확인됐다.",
+  ["Brat 2026 Conclusions(p.2083)", "Aoki: RB pathway 묶음은 grade 4 수준이나 개별로는 비유의", "Cimino: CDK4 amp 단독 median 63개월(intermediate)"],
+  "원문도 왜 RB pathway 개별 변화가 CDKN2A/B HD보다 약한지는 '명확하지 않다'고 했다(가설: p16·p15·p14ARF 동시 소실)."));
+C.push(...QA(26, "CDKN2A/B hemizygous deletion도 grade를 올리나?",
+  "아니다. 2개 연구는 생존 단축, 2개는 무관으로 결과가 상반돼 grading 기준에서 제외됐다. CDKN2A point mutation은 grade 3 기준이다.",
+  ["Brat 2026 p.2072", "Oligodendroglioma에서도 hemizygous deletion은 예후와 무관"], "방법·threshold 차이가 원인일 수 있어 향후 바뀔 수 있다."));
 C.push(H2("11-C. 검출과 기술"));
 C.push(...QA(10, "PDGFRA amplification의 정의는? 몇 copy부터인가?",
-  "검사법마다 다르다. FISH는 >8 copies in ≥10% 종양세포, methylation CNV는 log ratio >0.8(IHC 논문) 또는 ±0.60 log2(CATNON)를 썼다.",
-  ["Tauziède-Espariat, Brain Pathol 2026", "Tesileanu 2021"],
-  "Update 12가 정한 통일 정의는 확인하지 못했다 [원문 확인 권장]. Gain(≤6 copies)은 amplification이 아니다."));
+  "Update 12 원문에는 copy 수 정의가 없다. 검사법별 기관 기준을 따른다. 참고로 PDGFRA IHC 논문은 FISH >8 copies in ≥10% 종양세포, CNV log ratio >0.8을 썼다.",
+  ["Brat 2026 원문 전체 검토 — 증폭 threshold 미기재", "Tauziède-Espariat, Brain Pathol 2026", "CATNON methylation 분석: ±0.60 log2"],
+  "정의가 통일되지 않은 것은 실제 한계다. Gain(≤6 copies)은 amplification이 아니다."));
 C.push(...QA(11, "종양 일부에만 증폭(clonal amplification)이 있어도 grade 4인가?",
   "명확한 기준은 찾지 못했다. FISH의 실무 정의(≥10% 세포)를 만족하면 amplification으로 보고된다.",
   ["IHC 논문: clonal amp 10례 중 FISH로 모두 검출, CNV로는 4례만 검출", "Tralongo: 단일 block은 모든 subclone을 대표하지 못함"],
@@ -716,19 +871,19 @@ C.push(...QA(11, "종양 일부에만 증폭(clonal amplification)이 있어도 
 C.push(...QA(12, "PDGFRA IHC만으로 진단해도 되나?",
   "안 된다. Screening 도구다. ≥10% 강양성은 민감도 100%, 특이도 89%로, gain이나 mutation에서도 양성이 나올 수 있어 FISH 등으로 확진해야 한다.",
   ["Tauziède-Espariat, Brain Pathol 2026: 강양성 >10% → 강력 의심, 국소 → 유전 검사 필수"], null));
-C.push(...QA(13, "우리 병원에서 모든 grade 2/3에 NGS·methylation을 해야 하나?",
-  "Update 12를 적용하려면 사실상 CNV 검사가 필요하다. 실제 진료에서 24%의 grade가 바뀌었다.",
-  ["Ann Pathol 2026: grade 2는 NGS + methylation, grade 3는 CDKN2A/B HD·PDGFRA amp을 볼 수 있는 기법(NGS, methylation, SNP/CGH array) 권장, 필요 시 전문 기관 의뢰"],
-  "비용·조직량·turnaround time 문제는 남아 있다(Tralongo 2026)."));
+C.push(...QA(13, "모든 grade 2/3에 NGS·methylation을 해야 하나?",
+  "Update 12는 '모든 경우 필요하지는 않다'고 한다. 분자 검사가 특히 필요한 경우는 ① 조직이 grade 2/3 경계 ② 영상에서 조영증강 또는 비교적 빠른 진행 ③ 특이한 임상 양상. 반대로 천천히 자라는 T2 고신호 비조영 병변 + 저등급 생검이면 분자 검사 없이도 grade 2를 꽤 높은 확신으로 진단할 수 있다.",
+  ["Brat 2026 Figure 1 설명, Conclusions", "Ann Pathol 2026: 실제 진료에서 24% grade 변경"],
+  "이 증례는 조영증강이 뚜렷하지 않았지만 ADC·rCBV 이상이 있었다. 원문 기준(조영증강·빠른 진행)에 정확히 들어가지는 않으므로, '원문 취지(영상상 공격성)를 확장 적용한 것'이라고 설명하는 것이 정직하다 [제안]."));
 
 C.push(H2("11-D. 영상"));
 C.push(...QA(14, "영상으로 PDGFRA amp을 예측할 수 있나?",
   "현재로서는 아니다. 특이 소견이 확립되지 않았다. 영상은 aggressive focus를 찾아 분자 검사를 유도하는 역할이다.",
   ["PubMed 검색에서 IDH-mut astrocytoma 대상 PDGFRA 영상 연구를 찾지 못함", "Kurokawa 2026: 영상은 targeted sampling과 분자 검사 우선순위 결정에 핵심"], null));
 C.push(...QA(15, "Grade 4인데 조영증강이나 괴사가 없는 게 말이 되나?",
-  "된다. 분자적으로만 grade 4인 종양은 조직학적 grade 4 소견(괴사·MVP)이 없고, 영상에서도 조영증강이 없을 수 있다.",
-  ["Ozono 2026: non-enhancing AST 38명 중 grade 4 존재", "Imai 2025: non-enhancing glioma에서 rCBV로 grade 4 구분(AUC 0.718)", "Alfattal 2026: grade 2의 50%가 조영증강 → 조영증강과 grade는 일대일 대응이 아님"],
-  "Jo 2025에서 A4의 96%가 조영증강을 보였으므로, 비조영 grade 4는 드문 편이다."));
+  "된다. 분자적으로만 grade 4인 종양은 괴사·MVP가 없고 조영증강도 없을 수 있다. Update 12도 MRI 조영증강의 예후 의미는 '논쟁 중'이라고 했다.",
+  ["Brat 2026 p.2082: 조영증강의 예후 의미는 disputed", "Ozono 2026: non-enhancing AST 중 grade 4 존재", "Imai 2025: 비조영 glioma에서 rCBV로 grade 4 구분(AUC 0.718)", "Alfattal 2026: grade 2의 50%가 조영증강"],
+  "Jo 2025에서 A4의 96%가 조영증강을 보였으므로 비조영 grade 4는 드문 편이다."));
 C.push(...QA(16, "ADC·rCBV 이상만으로 grade를 올리자고 한 것은 과잉 아닌가?",
   "영상으로 grade를 바꾼 것이 아니라, 불일치를 근거로 분자 재검토를 요청했고 grade는 병리 소견(PDGFRA amp)으로 바뀌었다.",
   ["Kurokawa 2026: diffusion restriction·perfusion 상승 부위가 biopsy target이고 분자 검사 우선순위를 정하는 근거"],
@@ -737,11 +892,14 @@ C.push(...QA(17, "T2-FLAIR mismatch가 있으면 저등급 아닌가?",
   "Mismatch는 IDH-mut astrocytoma를 시사할 뿐 grade를 보장하지 않는다. Partial mismatch는 grade 4에서도 보인다. 다만 CDKN2A HD 증례는 mismatch 음성이었다는 보고가 있다.",
   ["Kurokawa 2026: grade 4 IDH-mut의 26.4%가 partial mismatch", "Ozono 2026: CDKN2A HD 5례 모두 mismatch 음성"], null));
 
+C.push(...QA(27, "Update 12는 영상에 대해 뭐라고 하나?",
+  "세 가지다. ① 조영증강이나 비교적 빠른 진행이 보이면 분자 검사를 하라. ② 천천히 자라는 T2 고신호 비조영 병변 + 저등급 생검이면 분자 검사 없이도 grade 2를 꽤 확신할 수 있다. ③ 수술 전·후 종양 부피와 MRI 성장 속도가 가장 일관된 예후 인자이고, 조영증강의 예후 의미는 논쟁 중이다. Oligodendroglioma에서는 mitosis만으로 grade 3이고 조영증강이 없으면 생존이 길 수 있다.",
+  ["Brat 2026 Figure 1 설명, Conclusions, Multidisciplinary Considerations, Oligodendroglioma 절"], null));
 C.push(H2("11-E. 치료"));
 C.push(...QA(18, "CATNON에서 concurrent TMZ는 이득이 없었는데 왜 CCRT를 했나?",
-  "CATNON은 grade 3 조직(anaplastic) 환자 대상이었다. 분자적 grade 4 IDH-mut astrocytoma에 대한 무작위 근거는 없고, ASCO-SNO는 grade 4 IDH-mut에서 grade 3 권고와 GBM 권고 중 어느 쪽이든 허용한다. CCRT는 그 선택지 중 하나다.",
-  ["CATNON final: IDH-mut에서 concurrent HR 0.81(95% CI 0.63–1.04, 비유의), adjuvant HR 0.54", "Mohile 2022(ASCO-SNO)"],
-  "Concurrent TMZ가 IDH-mut에서 이득이 있다는 직접 근거는 없다. PDGFRA amp은 TMZ 효과를 예측하지 않는다(CATNON final). 치료 결정은 MDT의 판단이다."));
+  "CATNON은 grade 3(anaplastic) 환자 대상이었다. 분자적 grade 4 IDH-mut astrocytoma에 대한 무작위 근거는 없고, ASCO-SNO는 grade 4 IDH-mut에서 grade 3 권고와 GBM 권고 중 어느 쪽이든 허용한다. CCRT는 허용된 선택지 중 하나다.",
+  ["CATNON final: IDH-mut에서 concurrent HR 0.81(비유의), adjuvant HR 0.54", "Update 12: CATNON에서 RT 단독 5.1년 vs RT + adjuvant TMZ >12년", "Mohile 2022(ASCO-SNO), 2025 rapid update(Blakeley)"],
+  "IDH-mut에서 concurrent TMZ의 이득을 보여준 직접 근거는 없다. PDGFRA amp은 TMZ 효과를 예측하지 않는다. 치료 결정은 MDT의 판단이다."));
 C.push(...QA(19, "Grade만 올리고 치료 효과는 증명 못 한 것 아닌가?",
   "맞는 지적이다. Grade 상향은 예후 분류의 개선이고, 치료 강화가 생존을 늘린다는 직접 근거는 아직 없다.",
   ["CATNON final: 분자 marker는 prognostic, not predictive", "Virata 2026: 확장 기준이 치료 escalation과 임상시험 층화를 돕는다고 제안"],
@@ -754,9 +912,9 @@ C.push(...QA(21, "그럼 upgrade가 실제로 치료를 바꾼 지점은?",
   ["ASCO-SNO 2022", "CATNON"], null));
 
 C.push(H2("11-F. 증례 특이"));
-C.push(...QA(22, "63세면 IDH-wt GBM일 가능성은 배제했나?",
-  "IDH-mutant로 진단됐다. 다만 고령 IDH-mut astrocytoma는 드물어 IDH 확인 방법을 차트에서 확인해 두는 것이 좋다.",
-  ["Virata 2026: IDH-mut AST ≥55세 8.6%", "Alfattal 2026: ≥55세는 IDH-wt가 많지만 IDH-mut AST 22명 보고, IDH1 R132H가 95%"],
+C.push(...QA(22, "63세면 IDH-wt GBM일 가능성은 배제했나? 나이 자체가 예후 인자 아닌가?",
+  "IDH-mutant로 진단됐다. Update 12에 따르면 40세 cut-off는 더 이상 유효하지 않지만, grade 3 IDH-mut astrocytoma에서 60세 이상은 예후가 나쁘다. 고령이라 IDH 확인 방법을 차트에서 확인해 두는 것이 좋다.",
+  ["Brat 2026 p.2082", "Virata 2026: IDH-mut AST ≥55세 8.6%", "Alfattal 2026: ≥55세 IDH-mut AST 22명, IDH1 R132H 95%"],
   "검사 방법(IHC vs sequencing)은 증례 정보에서 확인 필요 [원문 확인 권장]."));
 C.push(...QA(23, "PDGFRA amp이 나온 검체가 영상의 aggressive 부위와 같은 곳인가?",
   "차트·병리 보고서에서 확인해야 한다. 같은 부위라면 영상-병리 상관의 좋은 예이고, 다르다면 종양 내 이질성을 보여준다.",
@@ -764,16 +922,16 @@ C.push(...QA(23, "PDGFRA amp이 나온 검체가 영상의 aggressive 부위와 
   "[원문 확인 권장]"));
 C.push(...QA(24, "CDKN2A/B 상태는? HD가 같이 있었다면 PDGFRA는 의미가 없지 않나?",
   "CDKN2A/B HD가 있었다면 그것만으로 이미 grade 4다. 이 증례의 의미는 PDGFRA amp이 grade 4의 근거였다는 것이므로, CDKN2A/B 상태를 확인해 발표해야 한다.",
-  ["Yang 2019: PDGFRA amp과 CDKN2A HD는 상호 배타적인 경향"],
+  ["Yang 2020: PDGFRA amp과 CDKN2A HD는 상호 배타적인 경향"],
   "[원문 확인 권장] 차트 확인"));
 
 // =============== 12. Evidence level ===============
 C.push(H1("12. 주장별 근거 수준"));
 C.push(...T(["주장", "근거 유형", "강도 [제안]"], [
   ["CDKN2A/B HD → grade 4", "다수 후향 코호트 + WHO CNS5 공식 기준", "높음 (공식)"],
-  ["PDGFRA amp → grade 4", "후향 코호트 + RCT 내 분자 분석 + 대규모 후향 validation + 전문가 합의", "중간 (cIMPACT-NOW, 이견 존재)"],
-  ["Mitosis ≥3 / 2.4 mm²", "전문가 합의 ('could be considered')", "낮음–중간 [원문 확인 권장]"],
-  ["Grade 3 분자 marker", "후향 코호트 (Virata, Richardson)", "중간"],
+  ["PDGFRA amp → grade 4", "RCT 내 분자 분석(CATNON HR 3.51, CDKN2A/B 독립) + 후향 코호트 다수 + 전문가 합의 + 발표 후 검증", "중간–높음 (cIMPACT-NOW, 일부 이견)"],
+  ["Mitosis ≥3 / 2.4 mm²", "2개 연구(Kros 455명 PFS만, Tran 100명) + 합의", "낮음–중간 (원문: 추가 연구 필요)"],
+  ["Grade 3 분자 marker (Table 2)", "후향 코호트 다수, 일부 RCT 분석(PIK3는 CATNON 장기추적서 소실)", "중간"],
   ["Adjuvant TMZ (grade 3 IDH-mut)", "Phase 3 RCT (CATNON)", "높음"],
   ["Concurrent TMZ (IDH-mut)", "Phase 3 RCT — 유의한 이득 없음", "이득 근거 없음"],
   ["Vorasidenib (grade 2)", "Phase 3 RCT (INDIGO), PFS", "높음 (PFS), OS 미확립"],
@@ -810,7 +968,7 @@ C.push(...T(["항목", "핵심", "출처"], [
   ["Update 9", "Methylation classifier는 통합 진단의 한 도구", "Aldape 2025"],
   ["Update 10", "새 type 정의(영상 포함 clinical phenotype 필수)", "Hawkins 2025"],
   ["Update 11", "<40세 EGFR amp·+7/−10 단독 GBM 금지, PDGFRA는 <25세 pedHGG marker", "Wesseling 2025"],
-  ["**Update 12**", "**PDGFRA amp → grade 4**, mitosis ≥3/2.4 mm², grade 3 분자 marker", "Brat 2026; Park YW KJR 2026 Fig. 2"],
+  ["**Update 12**", "**PDGFRA amp → grade 4**(CATNON 3.1 vs 9.3년, HR 3.51), ≥3 mitoses/2.4 mm² 또는 Table 2 분자 변화 → grade 3", "Brat 2026; Park YW KJR 2026 Fig. 2"],
   ["Validation", "51.4 vs 126.2개월 (HR 1.9)", "Richardson 2026"],
   ["반론", "Intermediate, 다변량 비유의, 단독 HR 4.5", "Virata 2026"],
   ["실제 진료", "24% grade 변경", "Tauziède-Espariat 2026"],
@@ -841,7 +999,16 @@ const refs = [
   "Tauziède-Espariat A, et al. [Update 12 in routine practice]. Ann Pathol 2026. doi:10.1016/j.annpat.2026.09.001",
   "Tauziède-Espariat A, et al. Immunohistochemistry as a tool for identifying PDGFRA amplification in CNS tumors. Brain Pathol 2026:e70142. doi:10.1111/bpa.70142",
   "Tralongo P, et al. DNA methylation profiling in IDH-mutant gliomas: biological evolution, molecular grading and clinical implementation. Neuropathol Appl Neurobiol 2026. doi:10.1111/nan.70100",
-  "Yang RR, et al. IDH mutant lower grade astrocytomas can be stratified by CDKN2A, CDK4 and PDGFRA copy number alterations. Brain Pathol 2019. doi:10.1111/bpa.12801",
+  "Yang RR, et al. IDH mutant lower grade astrocytomas can be stratified for risk by CDKN2A, CDK4 and PDGFRA copy number alterations. Brain Pathol 2020;30:541–553. doi:10.1111/bpa.12801",
+  "Ghosh HS, et al. Canonical amplifications and CDKN2A/B loss refine IDH1/2-mutant astrocytoma prognosis. Neuro-Oncol 2025;27:993–1003. doi:10.1093/neuonc/noae258 (Update 12 인용)",
+  "Richardson TE, Walker JM. The prognostic significance of RB and PI3K pathway alterations in IDH-mutant grade II/III astrocytomas. J Neuropathol Exp Neurol 2020;79:1019–1023. doi:10.1093/jnen/nlaa083 (Update 12 인용)",
+  "Shirahata M, et al. Novel, improved grading system(s) for IDH-mutant astrocytic gliomas. Acta Neuropathol 2018;136:153–166. doi:10.1007/s00401-018-1849-4 (Update 12 인용)",
+  "Kros JM, et al. Mitotic count is prognostic in IDH mutant astrocytoma without homozygous deletion of CDKN2A/B. Acta Neuropathol Commun 2018;6:95. (Update 12 인용)",
+  "Tran S, et al. A threshold for mitotic activity and post-surgical residual volume defines distinct prognostic groups for astrocytoma IDH-mutant. Neuropathol Appl Neurobiol 2023;49:e12928. doi:10.1111/nan.12928 (Update 12 인용)",
+  "Weller M, et al. Improved prognostic stratification of patients with IDH-mutant astrocytoma. Acta Neuropathol 2024;147:11. doi:10.1007/s00401-023-02662-1 (Update 12 인용)",
+  "Figarella-Branger D, et al. Reappraisal of prognostic factors in CNS WHO grade 3 oligodendrogliomas: the French POLA cohort. Neuro-Oncol 2025;27:755–766. doi:10.1093/neuonc/noae221 (Update 12 인용)",
+  "van den Bent MJ, et al. The biological significance of tumor grade, age, enhancement, and extent of resection in IDH-mutant gliomas. Neuro-Oncol 2024;26:1805–1822. doi:10.1093/neuonc/noae107 (Update 12 인용)",
+  "Blakeley J, et al. ASCO-SNO guideline rapid recommendation update. J Clin Oncol 2025;43:2129–2133. doi:10.1200/JCO-25-00250 (Update 12 인용)",
   "Tesileanu CMS, et al. Prognostic significance of genome-wide DNA methylation profiles within the CATNON trial. Neuro-Oncol 2021. doi:10.1093/neuonc/noab088",
   "Tesileanu CMS, et al. Molecular markers related to outcome in IDH-mutant astrocytomas grade 2–4: a systematic review. Eur J Cancer 2022. doi:10.1016/j.ejca.2022.08.016",
   "Wong QH, et al. Molecular landscape of IDH-mutant primary astrocytoma grade IV/glioblastomas. Mod Pathol 2021. doi:10.1038/s41379-021-00778-x",
